@@ -136,11 +136,26 @@ export default function HomePage() {
       </section>
 
       {/* Image Modal */}
-      <div id="image-modal" className="modal">
-        <span className="modal-close">&times;</span>
-        <img className="modal-content" id="modal-img" />
+      <div
+        id="image-modal"
+        className="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-caption"
+        tabIndex={-1}
+      >
+        <span
+          className="modal-close"
+          tabIndex={0}
+          role="button"
+          aria-label="Close modal"
+        >
+          &times;
+        </span>
+        <img className="modal-content" id="modal-img" alt="" tabIndex={0} />
         <div id="modal-caption"></div>
       </div>
+
 
       {/* Client‑side JS for menu & modal */}
       <Script src="/main.js" strategy="afterInteractive" />
