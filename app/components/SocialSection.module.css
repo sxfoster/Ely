@@ -1,0 +1,102 @@
+/* app/components/SocialSection.module.css */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Base Styles (Mini Mobile Portrait ≤360px)
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Carousel wrapper */
+.reel-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Scroll container */
+.reel-list {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 0.5rem;                    /* tight gap on very small screens */
+  padding: 0.5rem 0;
+  scrollbar-width: none;          /* Firefox */
+  -ms-overflow-style: none;       /* IE 10+ */
+}
+.reel-list::-webkit-scrollbar {
+  display: none;                  /* Chrome/Safari */
+}
+
+/* Each Reel card */
+.reel-card {
+  flex: 0 0 90%;                  /* almost full-width swipe */
+  scroll-snap-align: center;
+  aspect-ratio: 9/16;
+  background: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Nav arrows (hidden by default) */
+.carousel-nav {
+  display: none;
+  position: absolute;
+  top: 25%;                       /* center vertically */
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.8);
+  box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+.carousel-nav.prev { left: 0.5rem; }
+.carousel-nav.next { right: 0.5rem; }
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Mini Mobile Landscape (≥360px)
+   ───────────────────────────────────────────────────────────────────────────── */
+@media (min-width: 360px) {
+  .reel-list {
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+  }
+  .reel-card {
+    flex: 0 0 85%;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Mobile Standard (Samsung S20) ≥480px
+   ───────────────────────────────────────────────────────────────────────────── */
+@media (min-width: 480px) {
+  .reel-list {
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  .reel-card {
+    flex: 0 0 80%;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   iPad (≥768px)
+   ───────────────────────────────────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  /* show arrows */
+  .carousel-nav {
+    display: block;
+  }
+  /* two cards per view with peeks */
+  .reel-card {
+    flex: 0 0 45%;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Desktop (≥1024px)
+   ───────────────────────────────────────────────────────────────────────────── */
+@media (min-width: 1024px) {
+  
+}
