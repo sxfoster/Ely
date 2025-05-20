@@ -53,6 +53,12 @@ The contents of `out/` can be deployed to any static hosting provider.
 
 Images referenced in the Markdown live under `public/images/`, which is listed in `.gitignore`. You will need to supply your own images in that folder when running the site locally.
 
+## Continuous Integration
+
+This repository includes a GitHub Actions workflow (`.github/workflows/ci.yml`) that runs on every push and pull request to `main`. It installs dependencies with `npm ci`, builds the project, and uploads the `out/` directory as an artifact. Uncomment the deployment steps in the workflow to publish the site automatically to GitHub Pages or adapt it for another host such as Netlify.
+
+Create a branch protection rule for `main` so that pull requests must pass this workflow before they can be merged.
+
 ## Additional Notes
 
 - To start the production server (useful for previewing the build locally), run:
