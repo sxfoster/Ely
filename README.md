@@ -4,7 +4,7 @@ This project is a [Next.js](https://nextjs.org/) application that statically exp
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) (version 18 or later is recommended)
+- [Node.js](https://nodejs.org/) (version 18.x is required)
 - npm (comes with Node)
 
 ## Installation
