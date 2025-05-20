@@ -5,9 +5,6 @@ import Script from 'next/script'
 export const metadata = {
   title: 'Ely Aesthetics',
   description: 'Rediscover your radiant glow with expert spa treatments.',
-  icons: {
-    icon: '/images/favicon.ico',
-  },
   viewport: 'width=device-width, initial-scale=1',
   icons: {
     icon: '/images/favicon.ico',
