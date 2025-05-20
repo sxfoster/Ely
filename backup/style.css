@@ -265,20 +265,13 @@ nav a.active {
 
 /* Image‑Modal (Lightbox) Styles */
 .modal {
-  display: none;              
-  position: fixed;          
+  display: none;
+  position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8);    
-  align-items: center;         
-  justify-content: center;                  
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
   z-index: 1000;
-}
-.modal.active {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
-  padding: 1rem;
 }
 .modal-content {
   max-width: 90%;
@@ -291,8 +284,6 @@ nav a.active {
   color: #fff;
   text-align: center;
   font-size: 1rem;
-  max-width: 90%;
-
 }
 .modal-close {
   position: absolute;

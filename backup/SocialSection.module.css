@@ -1,0 +1,61 @@
+/* Carousel wrapper: positions nav buttons */
+.reel-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hide default scrollbar */
+.reel-list {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 1rem 0;
+  scrollbar-width: none;            /* Firefox */
+  -ms-overflow-style: none;         /* IE 10+ */
+}
+.reel-list::-webkit-scrollbar {
+  display: none;                    /* Chrome/Safari */
+}
+
+/* Each card snaps to center */
+.reel-card {
+  flex: 0 0 80%;
+  scroll-snap-align: center;
+  aspect-ratio: 9/16;
+  position: relative;
+}
+
+/* Nav arrows */
+.carousel-nav {
+  position: absolute;
+  top: 25%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.8);
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+.carousel-nav.prev {
+  left: 0.5rem;
+}
+.carousel-nav.next {
+  right: 0.5rem;
+}
+
+/* Hide nav on mobile (where swipe is primary) */
+@media (max-width: 599px) {
+  .carousel-nav {
+    display: none;
+  }
+}
+
+/* Optional: show more cards on desktop */
+@media (min-width: 900px) {
+  .reel-card {
+    flex: 0 0 40%;
+  }
+}

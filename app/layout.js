@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
                 Address: <a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/Ely+Esthetics/@32.7167633,-114.6242984,17z/data=!3m1!4b1!4m6!3m5!1s0x80d6f76ac597dd9f:0x2acce267d196eccd!8m2!3d32.7167633!4d-114.6242984!16s%2Fg%2F11k50850n2?coh=164777&entry=tt&shorturl=1">561 S 4th Ave, Yuma, AZ</a>
               </p>
               <p>
-                Phone: <a href="tel:(928)581-0046">928-581-0046</a>
+                Message me at: <a href="tel:(928)581-0046">928-581-0046</a> or <a href="https://instagram.com/elyzmanyfacez" target="_blank" rel="noopener">Instagram</a>
               </p>
               <div className="social-links">
                 <a
