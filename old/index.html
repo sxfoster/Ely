@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="menu-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 9h16.5m-16.5 6.75h16.5"
+        />
+      </svg>
+    </div>
+
+    <div class="menu-items-container">
+      <div class="close-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18 18 6M6 6l12 12"
+          />
+        </svg>
+      </div>
+
+      <div class="menu-items">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+
+  <section id="hero" class="hero">
+    <!-- Fallback static bg via CSS -->
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      poster="images/hero_fallback.jpg"
+    >
+      <source src="videos/hero.mp4" type="video/mp4">
+      <!-- Optional: add <source src="videos/hero.webm" type="video/webm"> -->
+    </video>
+
+    <div class="hero-content container">
+      <h1>Rediscover Your Radiant Glow</h1>
+      <p>At Ely Aesthetics, our expert spa treatments blend cutting‑edge science with soothing luxury—so you leave feeling renewed, naturally.</p>
+      <a target="_blank" rel="noopener noreferrer" href="https://mysite.vagaro.com/sweetcreamandrose/book-now" class="btn btn-primary">Book Your Appointment</a>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section id="services" class="services container">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <!-- Microneedling -->
+      <article class="service-card">
+        <div class="card-img">
+          <img src="images/microneedling-before-after.jpeg" alt="Before and after microneedling results showing reduced acne scars and refined skin texture." loading="lazy">
+        </div>
+        <h3>Microneedling</h3>
+        <p>Stimulate collagen and elastin production to visibly reduce fine lines, scars, and enlarged pores. After just two sessions, your skin will look smoother, firmer, and more even.</p>
+      </article>
+
+      <!-- HydraFacial -->
+      <article class="service-card">
+        <div class="card-img">
+          <img src="images/before-after-1.jpeg" alt="Patient receiving HydraFacial treatment with deep hydration and luminous finish." loading="lazy">
+        </div>        
+        <h3>HydraFacial</h3>
+        <p>A 4‑step “cleanse, extract, hydrate, protect” protocol that flushes out impurities and infuses antioxidants + peptides for an instant glow and lasting skin health.</p>
+      </article>
+
+      <!-- Dermaplaning -->
+      <article class="service-card">
+        <div class="card-img">
+          <img src="images/dermaplaning-before-after.jpeg" alt="Close‑up before/after of dermaplaning: smoother, more luminous skin." loading="lazy">
+        </div>
+        <h3>Dermaplaning</h3>
+        <p>Gently remove surface dead skin and fine “peach fuzz” with a medical‑grade blade—leaving an ultra‑smooth canvas that boosts product absorption and reveals brighter skin.</p>
+      </article>
+
+      <!-- Customized Facial -->
+      <article class="service-card">
+        <div class="card-img">
+          <img src="images/before-after-1.jpeg" alt="Client enjoying a customized facial mask treatment." loading="lazy">
+        </div>
+        <h3>Customized Facial</h3>
+        <p>Your skin is unique—that’s why every facial is tailored with advanced serums and masks to address hydration, sensitivity, or pigmentation concerns, followed by a calming massage.</p>
+      </article>
+    </div>
+  </section>
+    <!--Modal for images-->
+    <div id="image-modal" class="modal">
+      <span class="modal-close">&times;</span>
+      <img class="modal-content" id="modal-img">
+      <div id="modal-caption"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
