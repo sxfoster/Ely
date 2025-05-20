@@ -61,7 +61,7 @@ export default function HomePage() {
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              d="M4 6h16M4 12h16M4 18h16"
+              d="M6 18 18 6M6 6l12 12"
             />
           </svg>
         </div>
