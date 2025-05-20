@@ -8,6 +8,11 @@ export default function SocialSection() {
       const script = document.createElement('script')
       script.src = '//www.instagram.com/embed.js'
       script.async = true
+      script.onload = () => {
+        if (window.instgrm?.Embeds?.process) {
+          window.instgrm.Embeds.process()
+        }
+      }
       document.body.appendChild(script)
     } else {
       // If script already loaded, parse the embeds
