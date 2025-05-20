@@ -24,7 +24,7 @@ This project is a [Next.js](https://nextjs.org/) application that statically exp
 
 ## Development Workflow
 
-During development, run the built‑in dev server. This provides hot reloading and runs the site at `http://localhost:3000` by default. The dev command automatically opens the site in your default browser once the server is ready.
+During development, run the built‑in dev server. This provides hot reloading and runs the site at `http://localhost:3000` by default.
 
 ```bash
 npm run dev
