@@ -42,9 +42,6 @@ export default function Hero() {
         >
           Book Your Facial Today!
         </button>
-        <a href="/contact" className="btn btn-primary ml-2">
-          Contact Us
-        </a>
       </div>
     </section>
   );
