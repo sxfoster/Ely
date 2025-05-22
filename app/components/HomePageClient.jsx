@@ -1,6 +1,7 @@
 'use client'
 import ServicesCarousel from './ServicesCarousel'
 import SocialSection from './SocialSection'
+import BookingClient from "../components/BookingClient";
 import Hero from './Hero'
 
 export default function HomePageClient({ services }) {
@@ -67,7 +68,7 @@ export default function HomePageClient({ services }) {
 
       {/* Hero Section */}
       <Hero />
-
+      <BookingClient />
       {/* Services Grid */}
       <ServicesCarousel services={services} />
 
