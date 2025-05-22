@@ -2,6 +2,8 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { GetStaticPaths, GetStaticProps } from 'next'
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import Layout from '../../components/Layout'
 import {
   ServiceHero,
@@ -16,11 +18,11 @@ import {
 
 interface ServiceProps {
   frontMatter: any
-  content: string
+  mdxSource: MDXRemoteSerializeResult
   slug: string
 }
 
-const ServicePage: React.FC<ServiceProps> = ({ frontMatter, content, slug }) => {
+const ServicePage: React.FC<ServiceProps> = ({ frontMatter, mdxSource, slug }) => {
   return (
     <Layout>
       <ServiceHero
@@ -37,6 +39,9 @@ const ServicePage: React.FC<ServiceProps> = ({ frontMatter, content, slug }) => 
       <FAQAccordion faq={frontMatter.faq} />
       <TestimonialsCarousel testimonials={frontMatter.testimonials} />
       <StickyBookingBar serviceName={frontMatter.title} price={frontMatter.price} />
+      <section>
+        <MDXRemote {...mdxSource} components={{}} />
+      </section>
     </Layout>
   )
 }
@@ -53,11 +58,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string
   const filePath = path.join(process.cwd(), 'content/services', `${slug}.md`)
-  const fileContent = fs.readFileSync(filePath, 'utf-8')
-  const { data: frontMatter, content } = matter(fileContent)
+  const fileContent = fs.readFileSync(filePath, 'utf8')
+  const { data: frontMatter, content: mdxContent } = matter(fileContent)
+
+  const mdxSource: MDXRemoteSerializeResult = await serialize(mdxContent, {
+    // optional: remark/rehype plugins here
+  })
 
   return {
-    props: { frontMatter, content, slug },
+    props: { frontMatter, mdxSource, slug },
   }
 }
 
