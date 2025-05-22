@@ -34,6 +34,7 @@ export const ServiceHero: React.FC<ServiceHeroProps> = ({
         {subtitle}
       </p>
       <button
+        data-cy="book-now-button"
         className="bg-accent text-white py-3 px-6 rounded-2xl shadow-lg hover:opacity-90 transition"
         onClick={() =>
           window.dispatchEvent(

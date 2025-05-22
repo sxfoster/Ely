@@ -8,6 +8,7 @@ export const StickyBookingBar: React.FC<StickyBookingBarProps> = ({ serviceName,
       {serviceName} – ${price}
     </span>
     <button
+      data-cy="book-now-button"
       className="bg-accent text-white py-2 px-4 rounded-lg hover:opacity-90 transition"
       onClick={() =>
         window.dispatchEvent(new CustomEvent('open-booking', { detail: { service: serviceName } }))
