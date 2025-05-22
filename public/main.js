@@ -52,7 +52,19 @@ function showModal() {
   )
 }
 
-const openBookingBtn = document.getElementById('open-booking-dialog')
-if (openBookingBtn) {
-  openBookingBtn.addEventListener('click', showModal)
-}
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('[main.js] DOMContentLoaded fired')
+  const btn = document.getElementById('open-booking-dialog')
+  console.log('[main.js] Found booking button:', btn)
+  if (btn) {
+    btn.addEventListener('click', (e) => {
+      console.log('[main.js] click event on #open-booking-dialog')
+      showModal()
+    })
+  }
+  // Also listen for the custom event if used:
+  window.addEventListener('open-booking', (e) => {
+    console.log('[main.js] open-booking event received with detail:', e.detail)
+    // showModal or redirect...
+  })
+})
