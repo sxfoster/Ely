@@ -13,6 +13,19 @@ export const ServiceHero: React.FC<ServiceHeroProps> = ({ videoUrl, poster, titl
     {/* TODO: implement video background with overlay */}
     <h1>{title}</h1>
     <p>{subtitle}</p>
-    <button>{ctaText}</button>
+    <button
+      onClick={() => {
+        window.dispatchEvent(
+          new CustomEvent('open-booking', { detail: { service: title } })
+        )
+        if (window.gtag) {
+          window.gtag('event', 'service_booking_click', {
+            service: title,
+          })
+        }
+      }}
+    >
+      {ctaText}
+    </button>
   </section>
 )

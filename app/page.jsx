@@ -67,7 +67,21 @@ export default function HomePage() {
         </div>
 
         <div className="menu-items">
-          <a href="#" id="menu-open-booking-dialog">Book Now</a>
+          <a
+            href="#"
+            onClick={() => {
+              window.dispatchEvent(
+                new CustomEvent('open-booking', { detail: { service: 'General Inquiry' } })
+              )
+              if (window.gtag) {
+                window.gtag('event', 'service_booking_click', {
+                  service: 'General Inquiry',
+                })
+              }
+            }}
+          >
+            Book Now
+          </a>
           <a href="/">Home</a>
           <a href="/">Services (Coming Soon)</a>
           <a href="/contact">Contact</a>
@@ -96,33 +110,23 @@ export default function HomePage() {
             this facial.
           </p>
           <button
-            id="open-booking-dialog"
             className="btn btn-primary"
+            onClick={() => {
+              window.dispatchEvent(
+                new CustomEvent('open-booking', { detail: { service: 'Restorative Rose Facial' } })
+              )
+              if (window.gtag) {
+                window.gtag('event', 'service_booking_click', {
+                  service: 'Restorative Rose Facial',
+                })
+              }
+            }}
           >
             Book Your Facial Today!
           </button>
         </div>
       </section>
 
-      {/* Booking Instructions Modal */}
-      <div id="booking-modal" className="modal booking-modal">
-        <div className="modal-content booking-content">
-          <span className="booking-close">&times;</span>
-          <h2>How to Book with Ely Aesthetics</h2>
-          <p>
-            We use an easy online booking system powered by Vagaro.
-            Click “Continue to Booking” below to open our scheduling
-            page in a new tab, then follow the prompts first selecting <strong>Elyzia Foster Reyes</strong>, then choose your
-            service and date.
-          </p>
-          <button
-            id="booking-continue"
-            className="btn btn-primary"
-          >
-            Continue to Booking
-          </button>
-        </div>
-      </div>
 
       {/* Services Grid */}
       <ServicesCarousel services={services} />
