@@ -44,3 +44,15 @@ if (closeBtn && modal) {
     if (e.target === modal) modal.classList.remove('active');
   });
 }
+
+// Booking modal logic - dispatch a custom event consumed by React
+function showModal() {
+  window.dispatchEvent(
+    new CustomEvent('open-booking', { detail: { service: 'General Inquiry' } })
+  )
+}
+
+const openBookingBtn = document.getElementById('open-booking-dialog')
+if (openBookingBtn) {
+  openBookingBtn.addEventListener('click', showModal)
+}
