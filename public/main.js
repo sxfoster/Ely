@@ -54,6 +54,23 @@ function showModal() {
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('[main.js] DOMContentLoaded fired')
+
+  // ------- Booking Modal container -------
+  const bookingModal = document.createElement('div')
+  bookingModal.id = 'booking-modal'
+  // ✦ Attach the overlay CSS class:
+  bookingModal.classList.add('booking-modal')
+
+  bookingModal.innerHTML = `
+    <div class="booking-content">
+      <!-- Existing modal content will be rendered here -->
+      <span class="booking-close" data-cy="booking-close">&times;</span>
+    </div>
+  `
+
+  // Finally, append to the document:
+  document.body.appendChild(bookingModal)
+
   const btn = document.getElementById('open-booking-dialog')
   console.log('[main.js] Found booking button:', btn)
   if (btn) {
