@@ -15,7 +15,7 @@ export const ServiceHero: React.FC<ServiceHeroProps> = ({
   subtitle,
   ctaText,
 }) => (
-  <section className="relative h-screen max-h-[600px]">
+  <section className="relative h-[60vh] min-h-[400px] w-full">
     <video
       className="absolute inset-0 w-full h-full object-cover"
       src={videoUrl}
@@ -25,12 +25,16 @@ export const ServiceHero: React.FC<ServiceHeroProps> = ({
       loop
       playsInline
     />
-    <div className="absolute inset-0 bg-[rgba(0,0,0,0.4)]" />
-    <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-      <h1 className="text-4xl font-semibold text-white mb-2">{title}</h1>
-      <p className="text-lg text-white mb-6">{subtitle}</p>
+    <div className="absolute inset-0 bg-black bg-opacity-40" />
+    <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-white mb-2">
+        {title}
+      </h1>
+      <p className="text-base sm:text-lg lg:text-xl text-white mb-6 max-w-2xl">
+        {subtitle}
+      </p>
       <button
-        className="bg-accent text-white py-3 px-6 rounded-xl shadow-lg hover:opacity-90"
+        className="bg-accent text-white py-3 px-6 rounded-2xl shadow-lg hover:opacity-90 transition"
         onClick={() =>
           window.dispatchEvent(
             new CustomEvent('open-booking', { detail: { service: title } })
