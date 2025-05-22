@@ -9,9 +9,9 @@ export interface BookingModalProps {
 const BookingModal: React.FC<BookingModalProps> = ({ service, onClose }) => (
   <div
     data-cy="booking-modal"
-    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+    className="booking-modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
   >
-    <div className="bg-white rounded-2xl p-6 max-w-md w-full text-center">
+    <div className="booking-content bg-white rounded-2xl p-6 max-w-md w-full text-center">
       <h3 className="text-xl font-semibold mb-4">How to Book {service}</h3>
       <p className="mb-4 text-sm text-gray-700">
         We use an online booking system powered by Vagaro. Click
@@ -31,7 +31,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ service, onClose }) => (
         Continue to Booking
       </button>
       <button
-        className="mt-1 text-sm text-gray-600 w-full"
+        className="btn btn-primary booking-cancel w-full mb-2"
         onClick={onClose}
       >
         Cancel
