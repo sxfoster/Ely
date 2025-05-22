@@ -10,7 +10,7 @@ import {
   FAQAccordion,
   TestimonialsCarousel,
   StickyBookingBar,
-} from '../../../components/services'
+} from '../../components/services'
 
 /*
   generateStaticParams
