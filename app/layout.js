@@ -1,7 +1,7 @@
 // app/layout.js
 import '../styles/style.css'
 import Script from 'next/script'
-import { BookingModal } from '../components/BookingModal'
+import BookingClient from '../components/BookingClient'
 
 export const metadata = {
   title: 'Ely Aesthetics',
@@ -18,12 +18,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head />
       <body>
-        <BookingModal />
-
-        {/* Page Content */}
-        <main>
-          {children}
-        </main>
+        <BookingClient>
+          {/* Page Content */}
+          <main>
+            {children}
+          </main>
+        </BookingClient>
 
         {/* Shared Footer */}
         <footer className="site-footer">
