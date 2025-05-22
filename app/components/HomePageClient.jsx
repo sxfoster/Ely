@@ -86,6 +86,7 @@ export default function HomePageClient({ services }) {
             this facial.
           </p>
           <button
+            id="open-booking-dialog"
             data-cy="book-now-button"
             className="btn btn-primary"
             onClick={() => {
