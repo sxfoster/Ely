@@ -3,6 +3,7 @@ import React from 'react';
 
 export default function Hero() {
   const handleClick = () => {
+    console.log('Hero booking button clicked');
     // Fire the booking event
     window.dispatchEvent(
       new CustomEvent('open-booking', {
