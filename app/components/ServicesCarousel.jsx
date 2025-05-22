@@ -25,13 +25,13 @@ export default function ServicesCarousel({ services }) {
 
         <div className={styles.list} ref={list}>
           {services.map(svc => (
-            <article key={svc.slug} className={styles.card}>
+            <a key={svc.slug} href={`/services/${svc.slug}`} className={styles.card}>
               <div className={`card-img ${styles.img}`}>
                 <img src={svc.image} alt={svc.alt} loading="lazy" />
               </div>
               <h3>{svc.title}</h3>
               <p>{svc.description}</p>
-            </article>
+            </a>
           ))}
         </div>
 
