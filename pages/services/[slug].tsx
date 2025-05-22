@@ -2,8 +2,6 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import Layout from '../../components/Layout'
 import {
   ServiceHero,
@@ -15,6 +13,8 @@ import {
   TestimonialsCarousel,
   StickyBookingBar,
 } from '../../components/services'
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 
 interface ServiceProps {
   frontMatter: any
@@ -22,29 +22,27 @@ interface ServiceProps {
   slug: string
 }
 
-const ServicePage: React.FC<ServiceProps> = ({ frontMatter, mdxSource, slug }) => {
-  return (
-    <Layout>
-      <ServiceHero
-        videoUrl={frontMatter.video}
-        poster={frontMatter.poster}
-        title={frontMatter.title}
-        subtitle={frontMatter.subtitle}
-        ctaText="Book This Treatment"
-      />
-      <Breadcrumb slug={slug} title={frontMatter.title} />
-      <OverviewBenefits overview={frontMatter.overview} benefits={frontMatter.benefits} />
-      <HowItWorks steps={frontMatter.steps} />
-      <Gallery images={frontMatter.gallery} />
-      <FAQAccordion faq={frontMatter.faq} />
-      <TestimonialsCarousel testimonials={frontMatter.testimonials} />
-      <StickyBookingBar serviceName={frontMatter.title} price={frontMatter.price} />
-      <section>
-        <MDXRemote {...mdxSource} components={{}} />
-      </section>
-    </Layout>
-  )
-}
+const ServicePage: React.FC<ServiceProps> = ({ frontMatter, mdxSource, slug }) => (
+  <Layout>
+    <ServiceHero
+      videoUrl={frontMatter.video}
+      poster={frontMatter.poster}
+      title={frontMatter.title}
+      subtitle={frontMatter.subtitle}
+      ctaText="Book This Treatment"
+    />
+    <Breadcrumb slug={slug} title={frontMatter.title} />
+    <OverviewBenefits overview={frontMatter.overview} benefits={frontMatter.benefits} />
+    <HowItWorks steps={frontMatter.steps} />
+    <Gallery images={frontMatter.gallery} />
+    <FAQAccordion faq={frontMatter.faq} />
+    <TestimonialsCarousel testimonials={frontMatter.testimonials} />
+    <StickyBookingBar serviceName={frontMatter.title} price={frontMatter.price} />
+    <section className="prose max-w-3xl mx-auto py-12 px-4 lg:px-0">
+      <MDXRemote {...mdxSource} />
+    </section>
+  </Layout>
+)
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const files = fs.readdirSync(path.join(process.cwd(), 'content/services'))
@@ -58,12 +56,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string
   const filePath = path.join(process.cwd(), 'content/services', `${slug}.md`)
-  const fileContent = fs.readFileSync(filePath, 'utf8')
-  const { data: frontMatter, content: mdxContent } = matter(fileContent)
-
-  const mdxSource: MDXRemoteSerializeResult = await serialize(mdxContent, {
-    // optional: remark/rehype plugins here
-  })
+  const source = fs.readFileSync(filePath, 'utf-8')
+  const { data: frontMatter, content } = matter(source)
+  const mdxSource = await serialize(content)
 
   return {
     props: { frontMatter, mdxSource, slug },
