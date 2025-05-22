@@ -98,5 +98,15 @@
    Desktop (≥1024px)
    ───────────────────────────────────────────────────────────────────────────── */
 @media (min-width: 1024px) {
-  
+
+  /* loosen spacing slightly */
+  .reel-list {
+    gap: 1.25rem;
+    padding: 1.25rem 0;
+  }
+
+  /* show around three reels at once */
+  .reel-card {
+    flex: 0 0 30%;
+  }
 }
