@@ -1,7 +1,7 @@
 // app/layout.js
 import '../styles/style.css'
 import Script from 'next/script'
-import BookingClient from '../components/BookingClient'
+import BookingClient from '@components/BookingClient'
 
 export const metadata = {
   title: 'Ely Aesthetics',
