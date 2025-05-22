@@ -29,7 +29,14 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["app/components/*"],
+      "@content/*": ["content/*"],
+      "@styles/*": ["styles/*"],
+      "@/*": ["*"]
+    }
   },
   "include": [
     "next-env.d.ts",
