@@ -4,6 +4,7 @@ import React from 'react';
 export default function Hero() {
   const handleClick = () => {
     // Fire the booking event
+    console.log('[Hero] handleClick: dispatching open-booking for service:', 'Hero Service');
     window.dispatchEvent(
       new CustomEvent('open-booking', {
         detail: { service: 'Hero Service' },
