@@ -1,20 +1,38 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import '../styles/style.css'
 import Script from 'next/script'
-import { BookingModal } from './BookingModal'
+import BookingModal from './BookingModal'
 
 interface LayoutProps {
   children: React.ReactNode
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => (
-  <>
-    <BookingModal />
-    <main>{children}</main>
-    <footer className="site-footer">
-      <div className="container footer-content">
-        <div className="footer-brand">
-          <a href="/" className="logo">Ely Aesthetics</a>
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const [serviceToBook, setServiceToBook] = useState<string | null>(null)
+
+  useEffect(() => {
+    const openHandler = (e: CustomEvent) => {
+      setServiceToBook(e.detail.service)
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        ;(window as any).gtag('event', 'service_booking_open', {
+          service: e.detail.service,
+        })
+      }
+    }
+    window.addEventListener('open-booking', openHandler as EventListener)
+    return () => window.removeEventListener('open-booking', openHandler as EventListener)
+  }, [])
+
+  return (
+    <>
+      <main>{children}</main>
+      {serviceToBook && (
+        <BookingModal service={serviceToBook} onClose={() => setServiceToBook(null)} />
+      )}
+      <footer className="site-footer">
+        <div className="container footer-content">
+          <div className="footer-brand">
+            <a href="/" className="logo">Ely Aesthetics</a>
         </div>
         <div className="footer-contact">
           <p>
@@ -36,7 +54,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
       </div>
     </footer>
     <Script src="/main.js" strategy="afterInteractive" />
-  </>
-)
+    </>
+  )
+}
 
 export default Layout
