@@ -60,7 +60,7 @@ export default function HomePageClient({ services }) {
           </a>
           <a href="/">Home</a>
           <a href="/">Services (Coming Soon)</a>
-          <a href="/contact">Contact</a>
+          <a href="/contact">Contact Us</a>
         </div>
       </div>
 
@@ -102,6 +102,7 @@ export default function HomePageClient({ services }) {
           >
             Book Your Facial Today!
           </button>
+          <a href="/contact" className="btn btn-primary ml-2">Contact Us</a>
         </div>
       </section>
 
