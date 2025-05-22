@@ -90,14 +90,13 @@ export default function HomePageClient({ services }) {
             data-cy="book-now-button"
             className="btn btn-primary"
             onClick={() => {
-              window.dispatchEvent(
-                new CustomEvent('open-booking', { detail: { service: 'Restorative Rose Facial' } })
-              )
               if (window.gtag) {
                 window.gtag('event', 'service_booking_click', {
                   service: 'Restorative Rose Facial',
                 })
               }
+              window.location.href =
+                'https://mysite.vagaro.com/sweetcreamandrose/book-now'
             }}
           >
             Book Your Facial Today!
