@@ -19,12 +19,6 @@
   overflow: hidden;
 }
 
-.link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
 /* Scrollable List */
 .list {
   display: flex;
