@@ -412,3 +412,11 @@ nav a.active {
 .booking-content .btn-primary {
   margin-top: 1.5rem;
 }
+
+/* CTA button hover and focus states */
+.cta-button:hover,
+.cta-button:focus {
+  background-color: #005bb5;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.5);
+}

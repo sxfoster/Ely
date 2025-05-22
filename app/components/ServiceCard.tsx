@@ -19,7 +19,22 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       </div>
       <h3>{service.title}</h3>
       <p>{service.description}</p>
-      <Link href={`/services/${service.slug}`} className="cta-button">
+      <Link
+        href={`/services/${service.slug}`}
+        className="cta-button"
+        aria-label={`Learn more about ${service.title}`}
+        style={{
+          backgroundColor: '#0070f3',
+          color: '#ffffff',
+          padding: '0.75rem 1.5rem',
+          borderRadius: '0.5rem',
+          fontWeight: 'bold',
+          textAlign: 'center',
+          display: 'inline-block',
+          marginTop: '1rem',
+          transition: 'background-color 0.3s ease',
+        }}
+      >
         Learn More
       </Link>
     </div>
