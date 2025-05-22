@@ -5,10 +5,18 @@ export interface GalleryProps {
 }
 
 export const Gallery: React.FC<GalleryProps> = ({ images }) => (
-  <section>
-    <h2>Before & After</h2>
-    <div>
-      {images.map((src, i) => (<img key={i} src={src} alt="Service gallery image" />))}
+  <section className="py-12 px-6 lg:px-8">
+    <h2 className="text-2xl font-semibold text-center mb-8">Before & After</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {images.map((src, i) => (
+        <div key={i} className="overflow-hidden rounded-lg">
+          <img
+            src={src}
+            alt="Before and after result"
+            className="w-full h-auto object-cover hover:scale-105 transition"
+          />
+        </div>
+      ))}
     </div>
   </section>
 )

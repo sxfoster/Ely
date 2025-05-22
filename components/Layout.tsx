@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/style.css'
 import Script from 'next/script'
+import { BookingModal } from './BookingModal'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -8,6 +9,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => (
   <>
+    <BookingModal />
     <main>{children}</main>
     <footer className="site-footer">
       <div className="container footer-content">
