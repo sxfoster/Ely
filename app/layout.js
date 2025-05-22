@@ -6,11 +6,15 @@ import BookingClient from '@components/BookingClient'
 export const metadata = {
   title: 'Ely Aesthetics',
   description: 'Rediscover your radiant glow with expert spa treatments.',
-  viewport: 'width=device-width, initial-scale=1',
   icons: {
     icon: '/images/favicon.ico',
     apple: '/images/favicon.ico'
   }
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({ children }) {
