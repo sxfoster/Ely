@@ -83,3 +83,11 @@ Then run the tests in another terminal window:
 npm test
 ```
 
+On Linux, Cypress requires an X server. Install [Xvfb](https://en.wikipedia.org/wiki/Xvfb) or run the tests through `xvfb-maybe`:
+
+```bash
+sudo apt-get install xvfb
+# or
+npx xvfb-maybe npm test
+```
+
