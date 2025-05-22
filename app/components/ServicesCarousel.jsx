@@ -2,7 +2,7 @@
 import { useRef } from 'react'
 import styles from './ServicesCarousel.module.css'
 
-export default function ServicesCarousel({ services }) {
+export default function ServicesCarousel({ services, onImageClick }) {
   const list = useRef(null)
 
   const scroll = (dir) => {
@@ -27,7 +27,12 @@ export default function ServicesCarousel({ services }) {
           {services.map(svc => (
             <a key={svc.slug} href={`/services/${svc.slug}`} className={styles.card}>
               <div className={`card-img ${styles.img}`}>
-                <img src={svc.image} alt={svc.alt} loading="lazy" />
+                <img
+                  src={svc.image}
+                  alt={svc.alt}
+                  loading="lazy"
+                  onClick={onImageClick ? () => onImageClick(svc.image, svc.alt) : undefined}
+                />
               </div>
               <h3>{svc.title}</h3>
               <p>{svc.description}</p>

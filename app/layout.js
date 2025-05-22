@@ -1,6 +1,5 @@
 // app/layout.js
 import '../styles/style.css'
-import Script from 'next/script'
 
 export const metadata = {
   title: 'Ely Aesthetics',
@@ -53,8 +52,7 @@ export default function RootLayout({ children }) {
           </div>
         </footer>
 
-        {/* Client‑side scripts */}
-        <Script src="/main.js" strategy="afterInteractive" />
+        {/* Client‑side scripts removed; functionality now handled in React components */}
 
       </body>
     </html>
