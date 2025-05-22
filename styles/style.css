@@ -304,36 +304,6 @@ nav a.active {
   z-index: 1001;
 }
 
-/* Booking Modal Overlay */
-.booking-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-.booking-content {
-  background: #fff;
-  padding: 2rem;
-  max-width: 400px;
-  width: 90%;
-  border-radius: 8px;
-  text-align: center;
-  position: relative;
-}
-.booking-close {
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  color: #333;
-  cursor: pointer;
-}
-.booking-content .btn-primary {
-  margin-top: 1.5rem;
-}
 
 /* Footer */
 .site-footer {
@@ -403,4 +373,42 @@ nav a.active {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
   }
+}
+
+/* Booking Modal Overlay */
+.booking-modal {
+  display: none;                   /* hidden by default */
+  position: fixed;                 /* cover entire viewport */
+  inset: 0;                        /* top/right/bottom/left = 0 */
+  background: rgba(0,0,0,0.75);    /* dark translucent backdrop */
+  display: flex;                   /* flex centering */
+  align-items: center;             /* vertical center */
+  justify-content: center;         /* horizontal center */
+  z-index: 1000;                   /* top of all content */
+}
+
+/* Inner dialog box */
+.booking-content {
+  background: #fff;                /* white background */
+  padding: 2rem;                   /* internal spacing */
+  max-width: 400px;                /* width constraint */
+  width: 90%;                      /* responsive width */
+  border-radius: 8px;              /* rounded corners */
+  text-align: center;              /* center text */
+  position: relative;              /* for close-button positioning */
+}
+
+/* Close button in top-right */
+.booking-close {
+  position: absolute;              /* relative to .booking-content */
+  top: 0.5rem;                     /* offset from top */
+  right: 1rem;                     /* offset from right */
+  font-size: 1.5rem;               /* larger × */
+  color: #333;                     /* dark gray */
+  cursor: pointer;                 /* pointer on hover */
+}
+
+/* Add spacing above any primary button inside the modal */
+.booking-content .btn-primary {
+  margin-top: 1.5rem;
 }
