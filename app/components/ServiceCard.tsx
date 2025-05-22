@@ -13,7 +13,7 @@ export interface ServiceCardProps {
 
 export default function ServiceCard({ service }: ServiceCardProps) {
   return (
-    <div className={styles.card} data-cy="service-card">
+    <article className={styles.card} data-cy="service-card">
       <div className={`card-img ${styles.img}`}>
         <img src={service.image} alt={service.alt} loading="lazy" />
       </div>
@@ -37,6 +37,6 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       >
         Learn More
       </Link>
-    </div>
+    </article>
   )
 }
