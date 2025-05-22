@@ -11,7 +11,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [serviceToBook, setServiceToBook] = useState<string | null>(null)
 
   useEffect(() => {
+    console.log('[Layout] Attaching open-booking listener')
     const openHandler = (e: CustomEvent) => {
+      console.log(
+        '[Layout] open-booking event handler invoked:',
+        e.detail.service
+      )
       setServiceToBook(e.detail.service)
       if (typeof window !== 'undefined' && (window as any).gtag) {
         ;(window as any).gtag('event', 'service_booking_open', {
