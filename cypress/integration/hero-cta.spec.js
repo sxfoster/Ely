@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('Hero CTA Booking Redirect', () => {
+describe('Hero CTA Booking Modal', () => {
   beforeEach(() => {
     cy.visit('/', {
       onBeforeLoad(win) {
@@ -9,17 +9,14 @@ describe('Hero CTA Booking Redirect', () => {
     })
   })
 
-  it('redirects to Vagaro when hero button clicked', () => {
-    cy.get('[data-cy=book-now-button]').first().click()
-    cy.url().should(
-      'include',
-      'mysite.vagaro.com/sweetcreamandrose/book-now'
-    )
+  it('opens booking modal when hero button clicked', () => {
+    cy.get('[data-cy=hero-book-now]').click()
+    cy.get('[data-cy=booking-modal]').should('be.visible')
     cy.get('@gtag').should(
       'be.calledWith',
       'event',
-      'service_booking_click',
-      Cypress.sinon.match({ service: 'Restorative Rose Facial' })
+      'service_booking_open',
+      Cypress.sinon.match({ service: 'Hero Service' })
     )
   })
 })
