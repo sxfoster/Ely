@@ -2,9 +2,7 @@
 import path from 'path'
 import fs from 'fs'
 import matter from 'gray-matter'
-import HomePageClient from './components/HomePageClient'
-import Modal from './components/Modal'
-import { useState } from 'react'
+import HomePageWithModal from './components/HomePageWithModal'
 
 
 export default function HomePage() {
@@ -28,17 +26,4 @@ export default function HomePage() {
   })
   services.sort((a, b) => a.order - b.order)
   return <HomePageWithModal services={services} />
-}
-
-function HomePageWithModal({ services }: { services: any[] }) {
-  'use client'
-  const [isModalOpen, setIsModalOpen] = useState(false)
-
-  return (
-    <>
-      <button onClick={() => setIsModalOpen(true)}>Book Now</button>
-      {isModalOpen && <Modal onClose={() => setIsModalOpen(false)} />}
-      <HomePageClient services={services} />
-    </>
-  )
 }
