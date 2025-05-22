@@ -110,6 +110,7 @@ export default function HomePage() {
             this facial.
           </p>
           <button
+            data-cy="book-now-button"
             className="btn btn-primary"
             onClick={() => {
               window.dispatchEvent(

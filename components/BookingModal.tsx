@@ -22,7 +22,10 @@ export const BookingModal: React.FC = () => {
 
   if (!isOpen) return null
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <div
+      data-cy="booking-modal"
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+    >
       <div className="bg-white rounded-2xl p-6 max-w-md w-full">
         <h3 className="text-xl font-semibold mb-4">Book Your {service}</h3>
         {/* Insert your booking form component here, preloaded with `service` */}
