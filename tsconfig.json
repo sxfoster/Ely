@@ -1,5 +1,12 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["app/components/*"],
+      "@content/*": ["content/*"],
+      "@styles/*": ["styles/*"],
+      "@/*": ["*"]
+    },
     "target": "ES2017",
     "lib": [
       "dom",
