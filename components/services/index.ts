@@ -1,0 +1,8 @@
+export { ServiceHero } from './ServiceHero'
+export { Breadcrumb } from './Breadcrumb'
+export { OverviewBenefits } from './OverviewBenefits'
+export { HowItWorks } from './HowItWorks'
+export { Gallery } from './Gallery'
+export { FAQAccordion } from './FAQAccordion'
+export { TestimonialsCarousel } from './TestimonialsCarousel'
+export { StickyBookingBar } from './StickyBookingBar'
