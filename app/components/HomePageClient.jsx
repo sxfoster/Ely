@@ -68,7 +68,6 @@ export default function HomePageClient({ services }) {
 
       {/* Hero Section */}
       <Hero />
-      <BookingClient />
       {/* Services Grid */}
       <ServicesCarousel services={services} />
 
