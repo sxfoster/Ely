@@ -45,22 +45,21 @@ if (closeBtn && modal) {
   });
 }
 
-// Booking modal logic - dispatch a custom event consumed by React
-function showModal() {
-  window.dispatchEvent(
-    new CustomEvent('open-booking', { detail: { service: 'General Inquiry' } })
-  )
-}
-
+// Booking modal logic
 document.addEventListener('DOMContentLoaded', () => {
   console.log('[main.js] DOMContentLoaded fired')
 
-  // ------- Booking Modal container -------
-  const bookingModal = document.createElement('div')
-  bookingModal.id = 'booking-modal'
-  // ✦ Attach the overlay CSS class:
-  bookingModal.classList.add('booking-modal')
+  // 1) Create or select the modal container
+  let bookingModal = document.getElementById('booking-modal')
+  if (!bookingModal) {
+    bookingModal = document.createElement('div')
+    bookingModal.id = 'booking-modal'
+    // Apply overlay styling class
+    bookingModal.classList.add('booking-modal')
+    document.body.appendChild(bookingModal)
+  }
 
+  // 2) Fill in the inner markup with the content wrapper and close button
   bookingModal.innerHTML = `
     <div class="booking-content">
       <!-- Existing modal content will be rendered here -->
@@ -68,20 +67,28 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   `
 
-  // Finally, append to the document:
-  document.body.appendChild(bookingModal)
+  // 3) Show on custom event
+  window.addEventListener('open-booking', (e) => {
+    console.log('[main.js] open-booking event:', e.detail)
+    bookingModal.style.display = 'flex'
+  })
 
+  // 4) Bind native click handler if needed
   const btn = document.getElementById('open-booking-dialog')
   console.log('[main.js] Found booking button:', btn)
   if (btn) {
     btn.addEventListener('click', (e) => {
-      console.log('[main.js] click event on #open-booking-dialog')
-      showModal()
+      e.preventDefault()
+      console.log('[main.js] click on #open-booking-dialog')
+      bookingModal.style.display = 'flex'
     })
   }
-  // Also listen for the custom event if used:
-  window.addEventListener('open-booking', (e) => {
-    console.log('[main.js] open-booking event received with detail:', e.detail)
-    // showModal or redirect...
+
+  // 5) Wire up the close button
+  document.body.addEventListener('click', (evt) => {
+    if (evt.target.matches('.booking-close')) {
+      console.log('[main.js] click on .booking-close')
+      bookingModal.style.display = 'none'
+    }
   })
 })
