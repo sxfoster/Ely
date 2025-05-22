@@ -68,3 +68,18 @@ Create a branch protection rule for `main` so that pull requests must pass this 
   ```
 - Some dependencies (`remark` and `remark-html`) are installed but currently unused in the codebase.
 
+## Running Tests
+
+End-to-end tests are written with [Cypress](https://www.cypress.io/). Start the
+development server in one terminal:
+
+```bash
+npm run dev
+```
+
+Then run the tests in another terminal window:
+
+```bash
+npm test
+```
+
