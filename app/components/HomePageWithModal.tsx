@@ -10,11 +10,4 @@ interface HomePageWithModalProps {
 export default function HomePageWithModal({ services }: HomePageWithModalProps) {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  return (
-    <>
-      <button onClick={() => setIsModalOpen(true)}>Book Now</button>
-      {isModalOpen && <Modal onClose={() => setIsModalOpen(false)} />}
-      <HomePageClient services={services} />
-    </>
-  )
 }
