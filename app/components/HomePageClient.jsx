@@ -57,7 +57,7 @@ export default function HomePageClient({ services }) {
               }
             }}
           >
-            Book Now
+            Book Your Service Now
           </a>
           <a href="/">Home</a>
           <a href="/">Services (Coming Soon)</a>
