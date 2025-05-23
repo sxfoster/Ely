@@ -73,11 +73,6 @@ export default function HomePageClient({ services }) {
       {/* Social Media Reels */}
       <SocialSection />
 
-      {/* (Optional) Contact Form */}
-      <section id="contact" className="contact container">
-        {/* Paste your PHP form HTML here, updating action if necessary */}
-      </section>
-
       {/* Image Modal */}
       <div id="image-modal" className="modal">
         <span className="modal-close">&times;</span>

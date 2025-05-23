@@ -21,7 +21,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       <p>{service.description}</p>
       <Link
         href={`/services/${service.slug}`}
-        className="cta-button"
+        className="btn btn-primary"
         aria-label={`Learn more about ${service.title}`}
       >
         Learn More
