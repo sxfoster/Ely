@@ -10,4 +10,10 @@ interface HomePageWithModalProps {
 export default function HomePageWithModal({ services }: HomePageWithModalProps) {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
+  return (
+    <>
+      {isModalOpen && <Modal onClose={() => setIsModalOpen(false)} />}
+      <HomePageClient services={services} />
+    </>
+  )
 }
