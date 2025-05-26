@@ -16,6 +16,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: var(--font-secondary);
   background-color: var(--color-bg);
@@ -152,6 +155,7 @@ nav a.active {
   width: 100%;
   height: 70vh;
   overflow: hidden;
+  scroll-margin-top: 6rem;
 }
 .hero-wrapper {
   display: flex;
@@ -212,6 +216,11 @@ nav a.active {
 /* Services Section */
 .services {
   padding: 3rem 0;
+  scroll-margin-top: 6rem;
+}
+
+#contact {
+  scroll-margin-top: 6rem;
 }
 .services h2, .social-carousel h2 {
   font-family: var(--font-primary);
