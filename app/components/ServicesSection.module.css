@@ -50,7 +50,7 @@
 }
 
 .serviceImg {
-  width: 100%;
+  width: 75%;
   aspect-ratio: 3/2;
   object-fit: cover;
   border-radius: 1rem;
