@@ -423,4 +423,8 @@ footer p {
   .hero-content p {
     font-size: 1rem;
   }
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
