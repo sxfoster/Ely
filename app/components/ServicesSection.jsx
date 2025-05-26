@@ -1,3 +1,6 @@
+'use client'
+import { useState } from 'react'
+import ImageModal from './ImageModal'
 import styles from './ServicesSection.module.css'
 
 const services = [
@@ -10,17 +13,41 @@ const services = [
 ]
 
 export default function ServicesSection() {
+  const [modalOpen, setModalOpen] = useState(false)
+  const [modalImg, setModalImg] = useState('')
+
+  const openModal = (img) => {
+    setModalImg(img)
+    setModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setModalOpen(false)
+    setModalImg('')
+  }
+
   return (
     <section id="services" className="services container">
       <h2 className={styles.heading}>Our Services</h2>
       <div className={styles.grid}>
         {services.map(service => (
           <div key={service.id} className={styles.card}>
-            <img src={service.image} alt="" />
+            <button
+              onClick={() => openModal(service.image)}
+              className={styles.imageButton}
+              aria-label={`Learn more about ${service.name}`}
+            >
+              <img
+                src={service.image}
+                alt={service.name}
+                className={styles.serviceImg}
+              />
+            </button>
             <h3 className={styles.name}>{service.name}</h3>
           </div>
         ))}
       </div>
+      {modalOpen && <ImageModal image={modalImg} onClose={closeModal} />}
     </section>
   )
 }
