@@ -30,7 +30,6 @@ export default function ServicesCarousel({ services }) {
                 <img src={svc.image} alt={svc.alt} loading="lazy" />
               </div>
               <h3>{svc.title}</h3>
-              <p>{svc.description}</p>
             </article>
           ))}
         </div>
