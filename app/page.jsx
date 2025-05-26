@@ -1,6 +1,7 @@
 // app/page.js
 import Script from 'next/script'
 import SocialSection from './components/SocialSection'
+import InstagramCarousel from './components/InstagramCarousel'
 import AboutSection from './components/AboutSection'
 import path from 'path'
 import fs from 'fs'
@@ -149,6 +150,9 @@ export default function HomePage() {
 
       {/* Social Media Reels */}
       <SocialSection />
+
+      {/* Instagram Image Carousel */}
+      <InstagramCarousel />
 
       {/* (Optional) Contact Form */}
       <section id="contact" className="contact container">
