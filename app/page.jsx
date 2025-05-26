@@ -167,7 +167,6 @@ export default function HomePage() {
       </div>
 
       {/* Client‑side JS for menu & modal */}
-      <Script src="/main.js" strategy="afterInteractive" />
     </>
   )
 }
