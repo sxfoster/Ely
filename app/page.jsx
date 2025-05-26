@@ -7,6 +7,19 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import ServicesCarousel from './components/ServicesCarousel'
 
+export const metadata = {
+  title: 'Home | Ely Aesthetics',
+  description:
+    'Experience relaxing facials and advanced skincare services in Yuma, Arizona.',
+  keywords:
+    'Yuma facials, spa treatments, dermaplaning, HydraFacial, microneedling',
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
 
 export default function HomePage() {
   // 1. Read all markdown files in content/services
