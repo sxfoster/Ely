@@ -206,6 +206,7 @@ nav a.active {
 .hero-content {
   position: relative;
   z-index: 2;
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 0 1.2rem;
   display: flex;
   flex-direction: column;
