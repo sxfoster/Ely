@@ -27,11 +27,11 @@ export default function ServicesSection() {
   }
 
   return (
-    <section id="services" className="services container">
-      <h2 className={styles.heading}>Our Services</h2>
-      <div className={styles.grid}>
+    <section id="services" className={`services container ${styles.servicesSection}`}>
+      <h2 className={styles.servicesTitle}>Our Services</h2>
+      <div className={styles.servicesGrid}>
           {services.map(service => (
-            <div key={service.id} className={styles.card}>
+            <div key={service.id} className={styles.serviceCard}>
               <button
                 onClick={() => openModal(service.image)}
                 className={styles.imageButton}
@@ -43,7 +43,7 @@ export default function ServicesSection() {
                   className={styles.serviceImg}
                 />
               </button>
-              <h3 className={styles.name}>{service.name}</h3>
+              <h3 className={styles.serviceName}>{service.name}</h3>
               <button
                 className={styles.ctaButton}
                 onClick={() => openModal(service.image)}
