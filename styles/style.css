@@ -521,3 +521,88 @@ nav a.active {
   }
 }
 
+
+/* Service Page Styles */
+.service-nav {
+  position: sticky;
+  top: 0;
+  background: var(--color-blush);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+}
+.service-nav a {
+  font-family: var(--font-primary);
+  color: var(--color-accent);
+}
+.service-hero {
+  position: relative;
+  min-height: 40vh;
+  max-height: 60vh;
+  overflow: hidden;
+}
+.service-hero .hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.service-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,255,255,0.6);
+  padding: 2rem 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.service-content h2 {
+  font-family: var(--font-primary);
+  color: var(--color-accent);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.before-after img {
+  width: 100%;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+.faq-question {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 0;
+  cursor: pointer;
+  color: var(--color-accent);
+}
+.faq-answer {
+  padding-bottom: 0.75rem;
+}
+.testimonial {
+  margin-top: 2rem;
+  text-align: center;
+  font-style: italic;
+}
+.testimonial cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: normal;
+  font-weight: 600;
+}
+.sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-blush);
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 200;
+}
