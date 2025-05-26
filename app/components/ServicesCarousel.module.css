@@ -49,7 +49,7 @@
 
 /* Image Container */
 .img {
-  width: 100%;
+  width: 50%;
   aspect-ratio: 4/3;
   overflow: hidden;
   border-radius: 8px;
