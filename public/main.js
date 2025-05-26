@@ -98,3 +98,19 @@ if (bookingContinue) {
     bookingModal.style.display = 'none';
   });
 }
+
+// Smooth scrolling for in-page navigation (fallback for browsers without CSS support)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  const targetId = anchor.getAttribute('href').slice(1)
+  if (!targetId) return
+  const targetEl = document.getElementById(targetId)
+  if (!targetEl) return
+  anchor.addEventListener('click', e => {
+    e.preventDefault()
+    targetEl.scrollIntoView({ behavior: 'smooth' })
+    // close mobile menu if open
+    if (menuItemsContainer) {
+      menuItemsContainer.classList.remove('active')
+    }
+  })
+})
