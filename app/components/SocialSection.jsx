@@ -9,7 +9,7 @@ export default function SocialSection() {
   useEffect(() => {
     if (!window.instgrm) {
       const script = document.createElement('script')
-      script.src = '//www.instagram.com/embed.js'
+      script.src = 'https://www.instagram.com/embed.js'
       script.async = true
       script.onload = () => {
         if (window.instgrm?.Embeds?.process) {

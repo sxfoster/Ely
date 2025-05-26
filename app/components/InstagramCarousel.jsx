@@ -27,7 +27,7 @@ export default function InstagramCarousel() {
   useEffect(() => {
     if (!window.instgrm) {
       const s = document.createElement('script')
-      s.src = '//www.instagram.com/embed.js'
+      s.src = 'https://www.instagram.com/embed.js'
       s.async = true
       s.onload = () => window.instgrm?.Embeds?.process()
       document.body.appendChild(s)
