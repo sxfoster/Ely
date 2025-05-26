@@ -1,0 +1,94 @@
+/* app/components/InstagramCarousel.module.css */
+
+/* Base Styles */
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.list {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 90%;
+  scroll-snap-align: center;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.caption {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.nav {
+  display: none;
+  position: absolute;
+  top: 25%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.8);
+  box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+.prev { left: 0.5rem; }
+.next { right: 0.5rem; }
+
+@media (min-width: 360px) {
+  .list {
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+  }
+  .card {
+    flex: 0 0 85%;
+  }
+}
+
+@media (min-width: 480px) {
+  .list {
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  .card {
+    flex: 0 0 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: block;
+  }
+  .card {
+    flex: 0 0 45%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .list {
+    gap: 1.25rem;
+    padding: 1.25rem 0;
+  }
+  .card {
+    flex: 0 0 30%;
+  }
+}
