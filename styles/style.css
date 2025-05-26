@@ -213,6 +213,14 @@ nav a.active {
   max-width: 100%;
   margin: 0 auto 2rem;
 }
+/* Clamp hero text */
+.hero-content h1,
+.hero-content p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Clamp to 2 lines, adjust as needed */
+  -webkit-box-orient: vertical;
+}
 .btn-primary {
   font-family: var(--font-primary);
   font-weight: 600;
