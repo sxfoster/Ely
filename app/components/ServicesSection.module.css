@@ -1,0 +1,74 @@
+/* app/components/ServicesSection.module.css */
+
+.servicesSection {
+  padding: 3rem 0;
+}
+
+.servicesTitle {
+  font-family: var(--font-primary);
+  font-size: 1.75rem;
+  color: var(--color-accent);
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.serviceCard {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.imageButton {
+  padding: 0;
+  border: none;
+  background: none;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.serviceImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.serviceName {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  color: var(--color-accent);
+  margin: 0.75rem 0;
+}
+
+.ctaButton {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  background-color: var(--color-accent);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
