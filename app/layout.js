@@ -1,6 +1,8 @@
 // app/layout.js
 import '../styles/style.css'
 import Script from 'next/script'
+import SaleBanner from '@components/SaleBanner'
+import bannerConfig from '@content/banner.json'
 
 export const metadata = {
   title: 'Ely Aesthetics',
@@ -22,6 +24,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head />
       <body>
+
+        <SaleBanner
+          message={bannerConfig.message}
+          enabled={bannerConfig.enabled}
+          sticky={bannerConfig.sticky}
+          id={bannerConfig.id}
+        />
 
         {/* Page Content */}
         <main>
