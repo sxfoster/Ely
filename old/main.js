@@ -33,3 +33,19 @@ modal.addEventListener('click', (e) => {
     modal.style.display = 'none';
   }
 });
+
+// Smooth scrolling for in-page navigation
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  const targetId = anchor.getAttribute('href').slice(1)
+  if (!targetId) return
+  const targetEl = document.getElementById(targetId)
+  if (!targetEl) return
+  anchor.addEventListener('click', e => {
+    e.preventDefault()
+    targetEl.scrollIntoView({ behavior: 'smooth' })
+    if (menuItemsContainer) {
+      menuItemsContainer.classList.remove('active')
+    }
+  })
+})
+

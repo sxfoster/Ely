@@ -1,10 +1,25 @@
 // app/page.js
 import Script from 'next/script'
 import SocialSection from './components/SocialSection'
+import InstagramCarousel from './components/InstagramCarousel'
+import AboutSection from './components/AboutSection'
 import path from 'path'
 import fs from 'fs'
 import matter from 'gray-matter'
 import ServicesCarousel from './components/ServicesCarousel'
+
+export const metadata = {
+  title: 'Home | Ely Aesthetics',
+  description:
+    'Experience relaxing facials and advanced skincare services in Yuma, Arizona.',
+  keywords:
+    'Yuma facials, spa treatments, dermaplaning, HydraFacial, microneedling',
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
 
 
 export default function HomePage() {
@@ -68,9 +83,10 @@ export default function HomePage() {
 
         <div className="menu-items">
           <a href="#" id="menu-open-booking-dialog">Book Now</a>
-          <a href="/">Home</a>
-          <a href="/">Services (Coming Soon)</a>
-          <a href="/contact">Contact</a>
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
 
@@ -126,11 +142,17 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* About Section */}
+      <AboutSection />
+
       {/* Services Grid */}
       <ServicesCarousel services={services} />
 
       {/* Social Media Reels */}
       <SocialSection />
+
+      {/* Instagram Image Carousel */}
+      <InstagramCarousel />
 
       {/* (Optional) Contact Form */}
       <section id="contact" className="contact container">
