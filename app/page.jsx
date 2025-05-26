@@ -1,5 +1,4 @@
 // app/page.js
-import Script from 'next/script'
 import SocialSection from './components/SocialSection'
 import InstagramCarousel from './components/InstagramCarousel'
 import AboutSection from './components/AboutSection'
