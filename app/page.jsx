@@ -76,31 +76,33 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section id="hero" className="hero">
-        <video
-          className="hero-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          poster="/images/hero_fallback.jpg"
-        >
-          <source src="/videos/hero.mp4" type="video/mp4" />
-          {/* Optional: add <source src="/videos/hero.webm" type="video/webm" /> */}
-        </video>
-        <div className="hero-content container">
-          <h1>May Facial: Restorative Rose</h1>
-          <p>
-            Our May Facial is the perfect balance of effective yet gentle. A light peel along with a peptide enriched mask will soften and restore balance to the 
-            skin. While gua sha will aide in lymphatic drainage. Cryotherapy will bring down inflammation and a soothing shoulder & scalp massage will complete 
-            this facial.
-          </p>
-          <button
-            id="open-booking-dialog"
-            className="btn btn-primary"
+        <div className="hero-wrapper">
+          <video
+            className="hero-video"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster="/images/hero_fallback.jpg"
           >
-            Book Your Facial Today!
-          </button>
+            <source src="/videos/hero.mp4" type="video/mp4" />
+            {/* Optional: add <source src="/videos/hero.webm" type="video/webm" /> */}
+          </video>
+          <div className="hero-content">
+            <h1>May Facial: Restorative Rose</h1>
+            <p>
+              Our May Facial is the perfect balance of effective yet gentle. A light peel along with a peptide enriched mask will soften and restore balance to the
+              skin. While gua sha will aide in lymphatic drainage. Cryotherapy will bring down inflammation and a soothing shoulder & scalp massage will complete
+              this facial.
+            </p>
+            <button
+              id="open-booking-dialog"
+              className="btn btn-primary"
+            >
+              Book Your Facial Today!
+            </button>
+          </div>
         </div>
       </section>
 
