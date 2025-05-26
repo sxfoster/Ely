@@ -5,6 +5,9 @@
   --color-bg: #FDFBF9;        /* Ivory background */
   --color-blush: #FCEBEF;     /* Blush highlight */
   --color-accent: #265740;    /* Forest-green accent */
+  /* Brand colors for reusable components */
+  --brand-color: #265740;
+  --brand-color-dark: #1e4633;
   --color-text: #333333;      /* Dark text */
   --font-primary: 'Montserrat', 'Open Sans', sans-serif;
   --font-secondary: 'Open Sans', sans-serif;
