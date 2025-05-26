@@ -1,0 +1,29 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-blush);
+  color: var(--color-accent);
+  font-family: var(--font-primary);
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+}
+
+.message {
+  flex: 1;
+  margin-right: 0.5rem;
+}
+
+.close {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+  min-width: 36px;
+  min-height: 36px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
