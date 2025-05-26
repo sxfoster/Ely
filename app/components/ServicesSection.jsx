@@ -30,22 +30,28 @@ export default function ServicesSection() {
     <section id="services" className="services container">
       <h2 className={styles.heading}>Our Services</h2>
       <div className={styles.grid}>
-        {services.map(service => (
-          <div key={service.id} className={styles.card}>
-            <button
-              onClick={() => openModal(service.image)}
-              className={styles.imageButton}
-              aria-label={`Learn more about ${service.name}`}
-            >
-              <img
-                src={service.image}
-                alt={service.name}
-                className={styles.serviceImg}
-              />
-            </button>
-            <h3 className={styles.name}>{service.name}</h3>
-          </div>
-        ))}
+          {services.map(service => (
+            <div key={service.id} className={styles.card}>
+              <button
+                onClick={() => openModal(service.image)}
+                className={styles.imageButton}
+                aria-label={`Learn more about ${service.name}`}
+              >
+                <img
+                  src={service.image}
+                  alt={service.name}
+                  className={styles.serviceImg}
+                />
+              </button>
+              <h3 className={styles.name}>{service.name}</h3>
+              <button
+                className={styles.ctaButton}
+                onClick={() => openModal(service.image)}
+              >
+                Learn More
+              </button>
+            </div>
+          ))}
       </div>
       {modalOpen && <ImageModal image={modalImg} onClose={closeModal} />}
     </section>
