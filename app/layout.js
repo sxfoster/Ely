@@ -4,12 +4,17 @@ import Script from 'next/script'
 
 export const metadata = {
   title: 'Ely Aesthetics',
-  description: 'Rediscover your radiant glow with expert spa treatments.',
-  viewport: 'width=device-width, initial-scale=1',
+  description: 'Professional skincare and rejuvenating facial services in Yuma, Arizona.',
+  keywords: 'Ely Aesthetics, spa, facials, skincare, Yuma AZ',
   icons: {
     icon: '/images/favicon.ico',
     apple: '/images/favicon.ico'
   }
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({ children }) {
