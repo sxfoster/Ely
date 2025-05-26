@@ -10,6 +10,17 @@
 }
 
 /* Reset & Base */
+html {
+  scroll-behavior: smooth;
+}
+#hero,
+#about,
+#services,
+#social,
+#contact {
+  scroll-margin-top: 5rem;
+}
+
 * {
   margin: 0;
   padding: 0;
