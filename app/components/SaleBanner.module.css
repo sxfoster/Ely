@@ -1,29 +1,51 @@
 .banner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: var(--color-blush);
-  color: var(--color-accent);
-  font-family: var(--font-primary);
+  justify-content: center;
+  background: #FCEBEF;
+  color: #265740;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  padding: 0.5rem 1rem;
+  min-height: 44px;
+  padding: 0 1rem;
+  font-size: 1rem;
+  width: 100%;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .banner {
+    font-size: 1.2rem;
+    min-height: 56px;
+  }
 }
 
 .message {
   flex: 1;
-  margin-right: 0.5rem;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .close {
-  background: none;
+  background: transparent;
   border: none;
-  color: inherit;
-  font-size: 1.5rem;
-  cursor: pointer;
+  color: #265740;
+  font-size: 1.7rem;
+  font-weight: 700;
   min-width: 36px;
   min-height: 36px;
-  line-height: 1;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 1rem;
+  transition: background 0.2s;
+}
+
+.close:focus,
+.close:hover {
+  outline: 2px solid #265740;
+  background: #F6D5DF;
 }
