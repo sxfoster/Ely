@@ -1,6 +1,5 @@
 // app/page.js
 import SocialSection from './components/SocialSection'
-import InstagramCarousel from './components/InstagramCarousel'
 import ServicesSection from './components/ServicesSection'
 
 export const metadata = {
@@ -125,10 +124,6 @@ export default function HomePage() {
 
       {/* Social Media Reels */}
       <SocialSection />
-
-      {/* Instagram Image Carousel */}
-      <InstagramCarousel />
-
       {/* (Optional) Contact Form */}
       <section id="contact" className="contact container">
         {/* Paste your PHP form HTML here, updating action if necessary */}
