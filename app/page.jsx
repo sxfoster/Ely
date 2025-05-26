@@ -1,7 +1,6 @@
 // app/page.js
 import SocialSection from './components/SocialSection'
 import InstagramCarousel from './components/InstagramCarousel'
-import AboutSection from './components/AboutSection'
 import ServicesSection from './components/ServicesSection'
 
 export const metadata = {
@@ -119,8 +118,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* About Section */}
-      <AboutSection />
+      {/* About Section hidden temporarily */}
 
       {/* Services Grid */}
       <ServicesSection />
