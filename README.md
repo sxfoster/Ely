@@ -1,6 +1,6 @@
 # Ely Aesthetics Site
 
-This project is a [Next.js](https://nextjs.org/) application that statically exports a small marketing site for Ely Aesthetics. Service information is stored in Markdown files and rendered through React components using the Next.js App Router.
+This project is a [Next.js](https://nextjs.org/) application that statically exports a small marketing site for Ely Aesthetics.
 
 ## Prerequisites
 
@@ -45,13 +45,10 @@ The contents of `out/` can be deployed to any static hosting provider.
 ## Project Structure
 
 - `app/` – Next.js pages, layout and React components
-- `content/` – Markdown files describing available services
 - `public/` – Client‑side JavaScript (`main.js`) and static assets
 - `styles/` – Global CSS
 - `old/` – Legacy HTML/CSS/JS kept for reference
 - `out/` – Generated static site after running the build
-
-Images referenced in the Markdown live under `public/images/`, which is listed in `.gitignore`. You will need to supply your own images in that folder when running the site locally.
 
 ## Continuous Integration
 
@@ -66,5 +63,4 @@ Create a branch protection rule for `main` so that pull requests must pass this 
   ```bash
   npm run start
   ```
-- Some dependencies (`remark` and `remark-html`) are installed but currently unused in the codebase.
 
