@@ -1,6 +1,7 @@
 // app/page.js
 import Script from 'next/script'
 import SocialSection from './components/SocialSection'
+import AboutSection from './components/AboutSection'
 import path from 'path'
 import fs from 'fs'
 import matter from 'gray-matter'
@@ -123,6 +124,9 @@ export default function HomePage() {
           </button>
         </div>
       </div>
+
+      {/* About Section */}
+      <AboutSection />
 
       {/* Services Grid */}
       <ServicesCarousel services={services} />
