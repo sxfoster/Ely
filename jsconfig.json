@@ -3,9 +3,10 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["app/components/*"],
-      "@content/*":    ["content/*"],
-      "@styles/*":     ["styles/*"],
-      "@/*":           ["*"]
+      "@/components/*": ["app/components/*"],
+      "@content/*": ["content/*"],
+      "@styles/*": ["styles/*"],
+      "@/*": ["*"]
     }
   },
   "exclude": ["node_modules", "out"]

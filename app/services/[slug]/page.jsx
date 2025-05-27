@@ -1,4 +1,4 @@
-import AccordionFAQ from '@components/AccordionFAQ'
+import AccordionFAQ from '@/components/AccordionFAQ'
 import { notFound } from 'next/navigation'
 
 const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
@@ -135,6 +135,7 @@ export default function ServicePage({ params }) {
   if (!data) return notFound()
 
   const { name, headline, benefits, description, faqs, testimonial } = data
+  const serviceFAQs = faqs
 
   return (
     <div className="service-page">
@@ -163,10 +164,12 @@ export default function ServicePage({ params }) {
           <img src={`/images/services/${params.slug}-beforeafter.jpg`} alt={`Before and after ${name} result`} />
         </figure>
 
-        <section>
-          <h2>FAQ</h2>
-          <AccordionFAQ items={faqs} />
-        </section>
+        {serviceFAQs.length > 0 && (
+          <section>
+            <h2 className="faq-heading">Frequently Asked Questions</h2>
+            <AccordionFAQ faqs={serviceFAQs} />
+          </section>
+        )}
 
         <section className="testimonial">
           <blockquote>{testimonial.text}</blockquote>

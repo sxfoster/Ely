@@ -2,7 +2,7 @@
 import { useState, useRef } from 'react'
 
 // AccordionFAQ supports only one open item at a time, per a11y best practices.
-export default function AccordionFAQ({ items = [] }) {
+export default function AccordionFAQ({ faqs = [] }) {
   const [open, setOpen] = useState(null)
   const buttonRefs = useRef([])
 
@@ -14,13 +14,13 @@ export default function AccordionFAQ({ items = [] }) {
     switch (e.key) {
       case 'ArrowDown': {
         e.preventDefault()
-        const next = (idx + 1) % items.length
+        const next = (idx + 1) % faqs.length
         buttonRefs.current[next]?.focus()
         break
       }
       case 'ArrowUp': {
         e.preventDefault()
-        const prev = (idx - 1 + items.length) % items.length
+        const prev = (idx - 1 + faqs.length) % faqs.length
         buttonRefs.current[prev]?.focus()
         break
       }
@@ -37,7 +37,7 @@ export default function AccordionFAQ({ items = [] }) {
 
   return (
     <div className="faq-accordion">
-      {items.map((item, idx) => {
+      {faqs.map((item, idx) => {
         const id = `faq-${idx}`
         return (
           <div className="faq-item" key={id}>
