@@ -1,0 +1,32 @@
+/* app/components/AccordionFAQ.module.css */
+
+.faqContainer {
+  margin: 2rem 0;
+}
+
+.faqItem {
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem 0;
+}
+
+.faqQuestion {
+  font-family: var(--font-primary);
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 0;
+  color: var(--color-accent);
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+.faqAnswer {
+  font-family: var(--font-secondary);
+  padding: 0 0 0.75rem 0;
+  display: none;
+}
+
+.faqAnswerOpen {
+  display: block;
+}
