@@ -127,6 +127,8 @@ export function generateMetadata({ params }) {
   }
 }
 
+import Nav from '../../components/Nav'
+
 export default function ServicePage({ params }) {
   const data = services[params.slug]
 
@@ -136,9 +138,7 @@ export default function ServicePage({ params }) {
 
   return (
     <div className="service-page">
-      <nav className="service-nav">
-        <a href="/">&larr; Back Home</a>
-      </nav>
+      <Nav />
       <section className="service-hero">
         <img src={`/images/services/${params.slug}-hero.jpg`} alt={name} className="hero-image" />
         <div className="hero-content">
