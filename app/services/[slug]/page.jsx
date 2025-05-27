@@ -175,7 +175,15 @@ export default function ServicePage({ params }) {
       </div>
 
       <div className="sticky-cta">
-        <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book Now</a>
+        <a
+          href={bookingUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary"
+          aria-label="Book this service on Vagaro"
+        >
+          Book Now
+        </a>
       </div>
     </div>
   )
