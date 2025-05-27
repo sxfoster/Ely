@@ -10,8 +10,7 @@ const benefits = [
 ]
 
 const description = [
-  "Microneedling uses tiny needles to trigger your skin's natural healing response for a firmer, more even complexion.",
-  'Treatments are comfortable with numbing cream and have minimal downtime.'
+  'Hydrafacials deeply cleanse, exfoliate, and hydrate the skin, effectively addressing acne, dryness, and signs of aging.'
 ]
 
 const testimonial = {

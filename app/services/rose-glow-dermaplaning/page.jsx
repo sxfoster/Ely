@@ -10,8 +10,7 @@ const benefits = [
 ]
 
 const description = [
-  "Microneedling uses tiny needles to trigger your skin's natural healing response for a firmer, more even complexion.",
-  'Treatments are comfortable with numbing cream and have minimal downtime.'
+  'Dermaplaning gently exfoliates dead skin cells and removes fine hair, revealing a smoother, brighter complexion.'
 ]
 
 const testimonial = {

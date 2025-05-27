@@ -13,8 +13,7 @@ const services = {
       'Smooths fine lines'
     ],
     description: [
-      "Microneedling uses tiny needles to trigger your skin's natural healing response for a firmer, more even complexion.",
-      'Treatments are comfortable with numbing cream and have minimal downtime.'
+      'Microneedling stimulates collagen production, improving skin texture and reducing fine lines for a youthful appearance.'
     ],
     faqs: [
       { q: 'Does it hurt?', a: 'A numbing cream keeps you comfortable during the treatment.' },
@@ -68,8 +67,7 @@ const services = {
       'Instantly brighter skin'
     ],
     description: [
-      'Dermaplaning gently exfoliates away dull surface cells and vellus hair for a radiant finish.',
-      'The Rose Glow facial adds soothing botanicals so you leave glowing with zero downtime.'
+      'Dermaplaning gently exfoliates dead skin cells and removes fine hair, revealing a smoother, brighter complexion.'
     ],
     faqs: [
       { q: 'Will my hair grow back thicker?', a: 'No, dermaplaning will not change hair growth.' },
@@ -86,8 +84,7 @@ const services = {
       'Delivers antioxidants'
     ],
     description: [
-      'The Platinum Hydrafacial flushes out impurities and infuses skin with hydrating serums for an instant glow.',
-      "It's customizable for all skin types and a client favorite for immediate results."
+      'Hydrafacials deeply cleanse, exfoliate, and hydrate the skin, effectively addressing acne, dryness, and signs of aging.'
     ],
     faqs: [
       { q: 'Is it safe for sensitive skin?', a: "Yes, the treatment is adjustable to your skin's needs." },
@@ -104,8 +101,7 @@ const services = {
       'Targets hydration or blemishes'
     ],
     description: [
-      'Every facial begins with a consultation so we can address your specific concerns using advanced products.',
-      "From calming sensitivity to brightening dullness, you'll leave refreshed and renewed."
+      'Tailored facials combining various treatments to address individual skin concerns and enhance overall skin health.'
     ],
     faqs: [
       { q: 'What products are used?', a: 'We select professional-grade formulas based on your skin type.' },

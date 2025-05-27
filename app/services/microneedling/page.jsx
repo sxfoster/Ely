@@ -10,8 +10,7 @@ const benefits = [
 ]
 
 const description = [
-  "Microneedling uses tiny needles to trigger your skin's natural healing response for a firmer, more even complexion.",
-  'Treatments are comfortable with numbing cream and have minimal downtime.'
+  'Microneedling stimulates collagen production, improving skin texture and reducing fine lines for a youthful appearance.'
 ]
 
 const testimonial = {
