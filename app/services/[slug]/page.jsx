@@ -17,9 +17,42 @@ const services = {
       'Treatments are comfortable with numbing cream and have minimal downtime.'
     ],
     faqs: [
-      { q: 'Does it hurt?', a: 'A numbing cream keeps you comfortable during the treatment.' },
-      { q: 'How many sessions do I need?', a: 'Most clients see best results after 3–6 visits.' },
-      { q: 'Is there downtime?', a: 'Expect some redness for about a day.' }
+      {
+        q: 'What is microneedling?',
+        a: 'Microneedling is a minimally invasive skin treatment that uses fine needles to create micro-channels in the skin, stimulating your body\'s natural collagen production and promoting smoother, firmer, and more even-toned skin.'
+      },
+      {
+        q: 'Does microneedling hurt?',
+        a: 'Most clients describe the sensation as mild and tolerable. A topical numbing cream is applied before treatment to ensure your comfort.'
+      },
+      {
+        q: 'How many sessions will I need?',
+        a: 'While many clients see visible improvements after just one session, a series of 3–6 treatments spaced about 4–6 weeks apart is recommended for optimal results.'
+      },
+      {
+        q: 'What is the downtime after microneedling?',
+        a: 'Downtime is minimal. You may experience mild redness, sensitivity, or swelling for 1–3 days post-treatment, similar to a light sunburn.'
+      },
+      {
+        q: 'When will I see results?',
+        a: 'Many clients notice improved skin texture and glow within a week, with continued improvement as collagen production increases over the following weeks.'
+      },
+      {
+        q: 'Are there any side effects?',
+        a: 'Temporary redness, sensitivity, or slight swelling are common but subside quickly. Your esthetician will review all aftercare and safety guidelines with you.'
+      },
+      {
+        q: 'Is microneedling safe for all skin types?',
+        a: 'Yes! Microneedling is safe and effective for most skin types and tones. A consultation will help determine the best approach for your unique needs.'
+      },
+      {
+        q: 'What should I avoid after microneedling?',
+        a: 'Avoid direct sun exposure, heavy makeup, and active skincare ingredients (like retinol or acids) for a few days. Your provider will share detailed aftercare instructions.'
+      },
+      {
+        q: 'Can I combine microneedling with other treatments?',
+        a: 'Absolutely! Many clients combine microneedling with facials or peels for enhanced results. Your esthetician can recommend a custom plan.'
+      }
     ],
     testimonial: { text: 'Microneedling with Elyzia transformed my acne scars!', author: 'Sofia R.' }
   },
