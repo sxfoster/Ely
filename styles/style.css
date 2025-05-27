@@ -612,7 +612,7 @@ nav a.active {
   color: var(--color-accent);
 }
 .sticky-cta {
-  position: fixed;
+  position: sticky;
   bottom: 0;
   left: 0;
   width: 100%;
