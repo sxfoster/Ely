@@ -3,18 +3,16 @@ import { useEffect, useState } from 'react'
 import styles from './SaleBanner.module.css'
 
 export default function SaleBanner({ message = '', enabled = false, sticky = false, id = 'default' }) {
-  const storageKey = `saleBannerDismissed_${id}`
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     if (enabled && message && message.trim().length > 0) {
-      setVisible(!window.localStorage.getItem(storageKey))
+      setVisible(true)
     }
-  }, [enabled, message, id])
+  }, [enabled, message])
 
   function handleClose() {
     setVisible(false)
-    window.localStorage.setItem(storageKey, 'true')
   }
 
   const displayMessage = message?.slice(0, 90)
