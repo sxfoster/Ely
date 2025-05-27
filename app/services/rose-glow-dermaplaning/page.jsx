@@ -21,40 +21,24 @@ const testimonial = {
 
 const microneedlingFAQs = [
   {
-    question: 'What is microneedling?',
-    answer: 'Microneedling is a minimally invasive skin treatment that uses fine needles to create micro-channels in the skin, stimulating your body\u2019s natural collagen production and promoting smoother, firmer, and more even-toned skin.'
+    question: 'What is dermaplaning?',
+    answer: 'Dermaplaning gently exfoliates the skin\u2019s surface and removes peach fuzz using a specialized blade, leaving your skin ultra-smooth and radiant.'
   },
   {
-    question: 'Does microneedling hurt?',
-    answer: 'Most clients describe the sensation as mild and tolerable. A topical numbing cream is applied before treatment to ensure your comfort.'
+    question: 'Does it hurt or cause cuts?',
+    answer: 'No, the treatment is painless when performed by a trained professional. You may feel a gentle scraping sensation.'
   },
   {
-    question: 'How many sessions will I need?',
-    answer: 'While many clients see visible improvements after just one session, a series of 3\u20136 treatments spaced about 4\u20136 weeks apart is recommended for optimal results.'
+    question: 'Will my hair grow back thicker?',
+    answer: 'No\u2014dermaplaning does not change hair growth patterns or thickness.'
   },
   {
-    question: 'What is the downtime after microneedling?',
-    answer: 'Downtime is minimal. You may experience mild redness, sensitivity, or swelling for 1\u20133 days post-treatment, similar to a light sunburn.'
+    question: 'How often should I get dermaplaning?',
+    answer: 'Many clients enjoy a treatment every 4\u20136 weeks, but your provider can recommend the best schedule.'
   },
   {
-    question: 'When will I see results?',
-    answer: 'Many clients notice improved skin texture and glow within a week, with continued improvement as collagen production increases over the following weeks.'
-  },
-  {
-    question: 'Are there any side effects?',
-    answer: 'Temporary redness, sensitivity, or slight swelling are common but subside quickly. Your esthetician will review all aftercare and safety guidelines with you.'
-  },
-  {
-    question: 'Is microneedling safe for all skin types?',
-    answer: 'Yes! Microneedling is safe and effective for most skin types and tones. A consultation will help determine the best approach for your unique needs.'
-  },
-  {
-    question: 'What should I avoid after microneedling?',
-    answer: 'Avoid direct sun exposure, heavy makeup, and active skincare ingredients (like retinol or acids) for a few days. Your provider will share detailed aftercare instructions.'
-  },
-  {
-    question: 'Can I combine microneedling with other treatments?',
-    answer: 'Absolutely! Many clients combine microneedling with facials or peels for enhanced results. Your esthetician can recommend a custom plan.'
+    question: 'What should I avoid after treatment?',
+    answer: 'Skip harsh scrubs or actives for a few days and apply sunscreen daily.'
   }
 ]
 
