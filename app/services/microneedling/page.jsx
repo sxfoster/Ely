@@ -1,4 +1,4 @@
-import AccordionFAQ from '@components/AccordionFAQ'
+import AccordionFAQ from '@/components/AccordionFAQ'
 import Nav from '../../components/Nav'
 
 const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
@@ -58,6 +58,8 @@ const microneedlingFAQs = [
   }
 ]
 
+const serviceFAQs = microneedlingFAQs.map(faq => ({ q: faq.question, a: faq.answer }))
+
 export const metadata = {
   title: 'Microneedling | Ely Aesthetics'
 }
@@ -90,10 +92,12 @@ export default function MicroneedlingPage() {
           <img src="/images/services/microneedling-beforeafter.jpg" alt="Before and after Microneedling result" />
         </figure>
 
-        <section>
-          <h2 className="faq-heading">Frequently Asked Questions</h2>
-          <AccordionFAQ items={microneedlingFAQs.map(faq => ({ q: faq.question, a: faq.answer }))} />
-        </section>
+        {serviceFAQs.length > 0 && (
+          <section>
+            <h2 className="faq-heading">Frequently Asked Questions</h2>
+            <AccordionFAQ faqs={serviceFAQs} />
+          </section>
+        )}
 
         <section className="testimonial">
           <blockquote>{testimonial.text}</blockquote>
