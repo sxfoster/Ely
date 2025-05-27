@@ -21,40 +21,28 @@ const testimonial = {
 
 const microneedlingFAQs = [
   {
-    question: 'What is microneedling?',
-    answer: 'Microneedling is a minimally invasive skin treatment that uses fine needles to create micro-channels in the skin, stimulating your body\u2019s natural collagen production and promoting smoother, firmer, and more even-toned skin.'
+    question: 'What is a Skinbetter Peel?',
+    answer: 'The Skinbetter Peel is a professional chemical exfoliation treatment designed to refresh and brighten your skin with minimal irritation. It targets uneven tone, fine lines, and dullness.'
   },
   {
-    question: 'Does microneedling hurt?',
-    answer: 'Most clients describe the sensation as mild and tolerable. A topical numbing cream is applied before treatment to ensure your comfort.'
+    question: 'Will my skin peel after this treatment?',
+    answer: 'Some clients may experience light flaking or mild peeling 2\u20134 days after treatment. Many see a healthy glow without visible peeling.'
   },
   {
-    question: 'How many sessions will I need?',
-    answer: 'While many clients see visible improvements after just one session, a series of 3\u20136 treatments spaced about 4\u20136 weeks apart is recommended for optimal results.'
+    question: 'How soon will I see results?',
+    answer: 'Results\u2014such as smoother, more radiant skin\u2014can often be seen within a week, with continued improvement over time.'
   },
   {
-    question: 'What is the downtime after microneedling?',
-    answer: 'Downtime is minimal. You may experience mild redness, sensitivity, or swelling for 1\u20133 days post-treatment, similar to a light sunburn.'
+    question: 'Is there any downtime?',
+    answer: 'Minimal. You may experience slight redness or tightness for a day or two. Most clients return to normal activities immediately.'
   },
   {
-    question: 'When will I see results?',
-    answer: 'Many clients notice improved skin texture and glow within a week, with continued improvement as collagen production increases over the following weeks.'
+    question: 'Can all skin types get a Skinbetter Peel?',
+    answer: 'Yes, but your esthetician will assess your skin during your consultation to ensure it\u2019s the right fit.'
   },
   {
-    question: 'Are there any side effects?',
-    answer: 'Temporary redness, sensitivity, or slight swelling are common but subside quickly. Your esthetician will review all aftercare and safety guidelines with you.'
-  },
-  {
-    question: 'Is microneedling safe for all skin types?',
-    answer: 'Yes! Microneedling is safe and effective for most skin types and tones. A consultation will help determine the best approach for your unique needs.'
-  },
-  {
-    question: 'What should I avoid after microneedling?',
-    answer: 'Avoid direct sun exposure, heavy makeup, and active skincare ingredients (like retinol or acids) for a few days. Your provider will share detailed aftercare instructions.'
-  },
-  {
-    question: 'Can I combine microneedling with other treatments?',
-    answer: 'Absolutely! Many clients combine microneedling with facials or peels for enhanced results. Your esthetician can recommend a custom plan.'
+    question: 'How often can I get this peel?',
+    answer: 'For best results, we recommend a series spaced 4\u20136 weeks apart, based on your provider\u2019s advice.'
   }
 ]
 

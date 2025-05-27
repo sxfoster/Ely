@@ -21,40 +21,24 @@ const testimonial = {
 
 const microneedlingFAQs = [
   {
-    question: 'What is microneedling?',
-    answer: 'Microneedling is a minimally invasive skin treatment that uses fine needles to create micro-channels in the skin, stimulating your body\u2019s natural collagen production and promoting smoother, firmer, and more even-toned skin.'
+    question: 'What is a Platinum Hydrafacial?',
+    answer: 'The Platinum Hydrafacial is an advanced, multi-step facial treatment that cleanses, extracts, hydrates, and nourishes your skin in one session.'
   },
   {
-    question: 'Does microneedling hurt?',
-    answer: 'Most clients describe the sensation as mild and tolerable. A topical numbing cream is applied before treatment to ensure your comfort.'
+    question: 'Is there any discomfort during the Hydrafacial?',
+    answer: 'Most clients find it relaxing and pain-free, with a gentle suction and cool hydration.'
   },
   {
-    question: 'How many sessions will I need?',
-    answer: 'While many clients see visible improvements after just one session, a series of 3\u20136 treatments spaced about 4\u20136 weeks apart is recommended for optimal results.'
+    question: 'How long do results last?',
+    answer: 'Skin appears fresh and glowing for a week or more. Regular treatments help maintain optimal skin health.'
   },
   {
-    question: 'What is the downtime after microneedling?',
-    answer: 'Downtime is minimal. You may experience mild redness, sensitivity, or swelling for 1\u20133 days post-treatment, similar to a light sunburn.'
+    question: 'Is this treatment safe for sensitive skin?',
+    answer: 'Yes! The Hydrafacial can be customized for sensitive or problem-prone skin.'
   },
   {
-    question: 'When will I see results?',
-    answer: 'Many clients notice improved skin texture and glow within a week, with continued improvement as collagen production increases over the following weeks.'
-  },
-  {
-    question: 'Are there any side effects?',
-    answer: 'Temporary redness, sensitivity, or slight swelling are common but subside quickly. Your esthetician will review all aftercare and safety guidelines with you.'
-  },
-  {
-    question: 'Is microneedling safe for all skin types?',
-    answer: 'Yes! Microneedling is safe and effective for most skin types and tones. A consultation will help determine the best approach for your unique needs.'
-  },
-  {
-    question: 'What should I avoid after microneedling?',
-    answer: 'Avoid direct sun exposure, heavy makeup, and active skincare ingredients (like retinol or acids) for a few days. Your provider will share detailed aftercare instructions.'
-  },
-  {
-    question: 'Can I combine microneedling with other treatments?',
-    answer: 'Absolutely! Many clients combine microneedling with facials or peels for enhanced results. Your esthetician can recommend a custom plan.'
+    question: 'Can I wear makeup after?',
+    answer: 'It\u2019s best to wait a few hours, but most clients can apply makeup later the same day.'
   }
 ]
 
