@@ -1,4 +1,4 @@
-import FAQAccordion from '@components/FAQAccordion'
+import AccordionFAQ from '@components/AccordionFAQ'
 import { notFound } from 'next/navigation'
 
 const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
@@ -165,7 +165,7 @@ export default function ServicePage({ params }) {
 
         <section>
           <h2>FAQ</h2>
-          <FAQAccordion items={faqs} />
+          <AccordionFAQ items={faqs} />
         </section>
 
         <section className="testimonial">
