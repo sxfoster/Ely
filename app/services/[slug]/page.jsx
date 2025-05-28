@@ -136,13 +136,6 @@ export default function ServicePage({ params }) {
   return (
     <div className="service-page">
       <Nav />
-      <section className="service-hero">
-        <img src={`/images/services/${params.slug}-hero.jpg`} alt={name} className="hero-image" />
-        <div className="hero-content">
-          <h1>{name}</h1>
-          {headline && <p>{headline}</p>}
-        </div>
-      </section>
 
       <div className="service-content container">
         <section>
