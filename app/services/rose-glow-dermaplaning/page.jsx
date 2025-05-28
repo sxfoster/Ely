@@ -1,6 +1,5 @@
 import AccordionFAQ from '@/components/AccordionFAQ'
 import Nav from '../../components/Nav'
-import ServiceHero from '@/components/ServiceHero'
 
 const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
@@ -50,15 +49,6 @@ export default function RoseGlowDermaplaningPage() {
   return (
     <div className="service-page">
       <Nav />
-      <ServiceHero
-        serviceName="Rose Glow Dermaplaning Facial"
-        headline="Reveal a silky smooth canvas"
-        description={description[0]}
-        imageSrc="/images/dermaplaning-before-after.jpeg"
-        imageAlt="Rose Glow Dermaplaning Facial"
-        ctaText="Book Now"
-        ctaHref="https://www.vagaro.com/elyaesthetics"
-      />
 
       <div className="service-content container">
         <section>
