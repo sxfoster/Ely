@@ -7,7 +7,7 @@ export default function ServiceHero({
   imageSrc,
   imageAlt,
   ctaText,
-  onCtaClick,
+  ctaHref,
 }) {
   return (
     <section className="service-hero">
@@ -19,9 +19,14 @@ export default function ServiceHero({
         {headline && <p>{headline}</p>}
         {description && <p>{description}</p>}
         {ctaText && (
-          <button className="btn btn-primary" onClick={onCtaClick}>
+          <a
+            className="btn btn-primary"
+            href={ctaHref}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {ctaText}
-          </button>
+          </a>
         )}
       </div>
     </section>

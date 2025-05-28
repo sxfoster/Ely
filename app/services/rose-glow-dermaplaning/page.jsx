@@ -57,13 +57,7 @@ export default function RoseGlowDermaplaningPage() {
         imageSrc="/images/dermaplaning-before-after.jpeg"
         imageAlt="Rose Glow Dermaplaning Facial"
         ctaText="Book Now"
-        onCtaClick={() =>
-          window.open(
-            'https://www.vagaro.com/elyaesthetics',
-            '_blank',
-            'noopener'
-          )
-        }
+        ctaHref="https://www.vagaro.com/elyaesthetics"
       />
 
       <div className="service-content container">
