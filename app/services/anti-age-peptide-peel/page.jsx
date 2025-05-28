@@ -4,59 +4,56 @@ import Nav from '../../components/Nav'
 const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
 const benefits = [
-  'Stimulates collagen production',
-  'Minimizes scars and pores',
-  'Smooths fine lines'
+  'Peptide-rich formulation',
+  'Softens fine lines',
+  'Boosts radiance'
 ]
 
 const description = [
-  "Microneedling uses tiny needles to trigger your skin's natural healing response for a firmer, more even complexion.",
-  'Treatments are comfortable with numbing cream and have minimal downtime.'
+  'This treatment pairs mild exfoliation with powerful peptides to promote firm, supple skin.',
+  'Regular sessions smooth wrinkles and even out tone.'
 ]
 
 const testimonial = {
-  text: 'Microneedling with Elyzia transformed my acne scars!',
-  author: 'Sofia R.'
+  text: 'I love how smooth my skin feels!',
+  author: 'Lily S.'
 }
-
-const microneedlingFAQs = [
+const antiAgePeptidePeelFAQs = [
   {
-    question: 'What makes the Peptide Peel unique?',
-    answer: 'This treatment blends rejuvenating peptides with gentle exfoliation to target signs of aging\u2014like fine lines and uneven tone\u2014while being kind to sensitive skin.'
+    q: 'What makes the Peptide Peel unique?',
+    a: 'This treatment blends rejuvenating peptides with gentle exfoliation to target signs of aging\u2014like fine lines and uneven tone\u2014while being kind to sensitive skin.'
   },
   {
-    question: 'Will it irritate my skin?',
-    answer: 'Most clients experience only mild redness or tingling. The formula is designed to be effective yet gentle.'
+    q: 'Will it irritate my skin?',
+    a: 'Most clients experience only mild redness or tingling. The formula is designed to be effective yet gentle.'
   },
   {
-    question: 'How many sessions will I need?',
-    answer: 'While improvement is visible after one treatment, a series of sessions maximizes anti-aging results.'
+    q: 'How many sessions will I need?',
+    a: 'While improvement is visible after one treatment, a series of sessions maximizes anti-aging results.'
   },
   {
-    question: 'Can I combine the Peptide Peel with other facials?',
-    answer: 'Yes! Your esthetician can build a custom plan to combine peels with other services for optimal results.'
+    q: 'Can I combine the Peptide Peel with other facials?',
+    a: 'Yes! Your esthetician can build a custom plan to combine peels with other services for optimal results.'
   },
   {
-    question: 'What aftercare is required?',
-    answer: 'Avoid sun exposure and active skincare for several days. Use gentle cleanser, moisturizer, and sunscreen as directed.'
+    q: 'What aftercare is required?',
+    a: 'Avoid sun exposure and active skincare for several days. Use gentle cleanser, moisturizer, and sunscreen as directed.'
   }
 ]
 
-const serviceFAQs = microneedlingFAQs.map(faq => ({ q: faq.question, a: faq.answer }))
-
 export const metadata = {
-  title: 'Microneedling | Ely Aesthetics'
+  title: 'Anti-Age Peptide Peel | Ely Aesthetics'
 }
 
-export default function MicroneedlingPage() {
+export default function AntiAgePeptidePeelPage() {
   return (
     <div className="service-page">
       <Nav />
       <section className="service-hero">
-        <img src="/images/services/microneedling-hero.jpg" alt="Microneedling" className="hero-image" />
+        <img src="/images/services/anti-age-peptide-peel-hero.jpg" alt="Anti-Age Peptide Peel" className="hero-image" />
         <div className="hero-content">
-          <h1>Microneedling</h1>
-          <p>Stimulate collagen for smoother skin</p>
+          <h1>Anti-Age Peptide Peel</h1>
+          <p>Gentle exfoliation with age-defying peptides</p>
         </div>
       </section>
 
@@ -73,13 +70,13 @@ export default function MicroneedlingPage() {
         </section>
 
         <figure className="before-after">
-          <img src="/images/services/microneedling-beforeafter.jpg" alt="Before and after Microneedling result" />
+          <img src="/images/services/anti-age-peptide-peel-beforeafter.jpg" alt="Before and after Anti-Age Peptide Peel result" />
         </figure>
 
-        {serviceFAQs.length > 0 && (
+        {antiAgePeptidePeelFAQs.length > 0 && (
           <section>
             <h2 className="faq-heading">Frequently Asked Questions</h2>
-            <AccordionFAQ faqs={serviceFAQs} />
+            <AccordionFAQ faqs={antiAgePeptidePeelFAQs} />
           </section>
         )}
 

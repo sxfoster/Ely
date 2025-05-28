@@ -20,44 +20,42 @@ const testimonial = {
 
 const microneedlingFAQs = [
   {
-    question: 'What is microneedling?',
-    answer: 'Microneedling is a minimally invasive skin treatment that uses fine needles to create micro-channels in the skin, stimulating your body\u2019s natural collagen production and promoting smoother, firmer, and more even-toned skin.'
+    q: 'What is microneedling?',
+    a: 'Microneedling is a minimally invasive skin treatment that uses fine needles to create micro-channels in the skin, stimulating your body\u2019s natural collagen production and promoting smoother, firmer, and more even-toned skin.'
   },
   {
-    question: 'Does microneedling hurt?',
-    answer: 'Most clients describe the sensation as mild and tolerable. A topical numbing cream is applied before treatment to ensure your comfort.'
+    q: 'Does microneedling hurt?',
+    a: 'Most clients describe the sensation as mild and tolerable. A topical numbing cream is applied before treatment to ensure your comfort.'
   },
   {
-    question: 'How many sessions will I need?',
-    answer: 'While many clients see visible improvements after just one session, a series of 3\u20136 treatments spaced about 4\u20136 weeks apart is recommended for optimal results.'
+    q: 'How many sessions will I need?',
+    a: 'While many clients see visible improvements after just one session, a series of 3\u20136 treatments spaced about 4\u20136 weeks apart is recommended for optimal results.'
   },
   {
-    question: 'What is the downtime after microneedling?',
-    answer: 'Downtime is minimal. You may experience mild redness, sensitivity, or swelling for 1\u20133 days post-treatment, similar to a light sunburn.'
+    q: 'What is the downtime after microneedling?',
+    a: 'Downtime is minimal. You may experience mild redness, sensitivity, or swelling for 1\u20133 days post-treatment, similar to a light sunburn.'
   },
   {
-    question: 'When will I see results?',
-    answer: 'Many clients notice improved skin texture and glow within a week, with continued improvement as collagen production increases over the following weeks.'
+    q: 'When will I see results?',
+    a: 'Many clients notice improved skin texture and glow within a week, with continued improvement as collagen production increases over the following weeks.'
   },
   {
-    question: 'Are there any side effects?',
-    answer: 'Temporary redness, sensitivity, or slight swelling are common but subside quickly. Your esthetician will review all aftercare and safety guidelines with you.'
+    q: 'Are there any side effects?',
+    a: 'Temporary redness, sensitivity, or slight swelling are common but subside quickly. Your esthetician will review all aftercare and safety guidelines with you.'
   },
   {
-    question: 'Is microneedling safe for all skin types?',
-    answer: 'Yes! Microneedling is safe and effective for most skin types and tones. A consultation will help determine the best approach for your unique needs.'
+    q: 'Is microneedling safe for all skin types?',
+    a: 'Yes! Microneedling is safe and effective for most skin types and tones. A consultation will help determine the best approach for your unique needs.'
   },
   {
-    question: 'What should I avoid after microneedling?',
-    answer: 'Avoid direct sun exposure, heavy makeup, and active skincare ingredients (like retinol or acids) for a few days. Your provider will share detailed aftercare instructions.'
+    q: 'What should I avoid after microneedling?',
+    a: 'Avoid direct sun exposure, heavy makeup, and active skincare ingredients (like retinol or acids) for a few days. Your provider will share detailed aftercare instructions.'
   },
   {
-    question: 'Can I combine microneedling with other treatments?',
-    answer: 'Absolutely! Many clients combine microneedling with facials or peels for enhanced results. Your esthetician can recommend a custom plan.'
+    q: 'Can I combine microneedling with other treatments?',
+    a: 'Absolutely! Many clients combine microneedling with facials or peels for enhanced results. Your esthetician can recommend a custom plan.'
   }
 ]
-
-const serviceFAQs = microneedlingFAQs.map(faq => ({ q: faq.question, a: faq.answer }))
 
 export const metadata = {
   title: 'Microneedling | Ely Aesthetics'
@@ -91,10 +89,10 @@ export default function MicroneedlingPage() {
           <img src="/images/services/microneedling-beforeafter.jpg" alt="Before and after Microneedling result" />
         </figure>
 
-        {serviceFAQs.length > 0 && (
+        {microneedlingFAQs.length > 0 && (
           <section>
             <h2 className="faq-heading">Frequently Asked Questions</h2>
-            <AccordionFAQ faqs={serviceFAQs} />
+            <AccordionFAQ faqs={microneedlingFAQs} />
           </section>
         )}
 

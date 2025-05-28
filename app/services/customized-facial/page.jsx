@@ -4,9 +4,9 @@ import Nav from '../../components/Nav'
 const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
 const benefits = [
-  'Stimulates collagen production',
-  'Minimizes scars and pores',
-  'Smooths fine lines'
+  'Tailored to your needs',
+  'Includes relaxing massage',
+  'Targets hydration or blemishes'
 ]
 
 const description = [
@@ -14,48 +14,46 @@ const description = [
 ]
 
 const testimonial = {
-  text: 'Microneedling with Elyzia transformed my acne scars!',
-  author: 'Sofia R.'
+  text: 'Elyzia always knows exactly what my skin needs!',
+  author: 'Carmen L.'
 }
-
-const microneedlingFAQs = [
+const customizedFacialFAQs = [
   {
-    question: 'What is included in a Customized Facial?',
-    answer: 'Your treatment is tailored to your unique skin needs, using professional products and techniques selected by your esthetician after consultation.'
+    q: 'What is included in a Customized Facial?',
+    a: 'Your treatment is tailored to your unique skin needs, using professional products and techniques selected by your esthetician after consultation.'
   },
   {
-    question: 'How is this different from other facials?',
-    answer: 'Each session is unique\u2014no two treatments are the same. We select the right exfoliation, mask, and hydration steps just for you.'
+    q: 'How is this different from other facials?',
+    a: 'Each session is unique\u2014no two treatments are the same. We select the right exfoliation, mask, and hydration steps just for you.'
   },
   {
-    question: 'Can it address specific concerns like acne or dryness?',
-    answer: 'Absolutely! Your facial is personalized to target your goals, whether that\u2019s acne, dehydration, aging, or dullness.'
+    q: 'Can it address specific concerns like acne or dryness?',
+    a: 'Absolutely! Your facial is personalized to target your goals, whether that\u2019s acne, dehydration, aging, or dullness.'
   },
   {
-    question: 'How often should I get a Customized Facial?',
-    answer: 'We recommend monthly visits for most clients, but your provider will suggest what\u2019s best for you.'
+    q: 'How often should I get a Customized Facial?',
+    a: 'We recommend monthly visits for most clients, but your provider will suggest what\u2019s best for you.'
   },
   {
-    question: 'Is this treatment safe for all skin types?',
-    answer: 'Yes, all skin types and tones are welcome.'
+    q: 'Is this treatment safe for all skin types?',
+    a: 'Yes, all skin types and tones are welcome.'
   }
 ]
 
-const serviceFAQs = microneedlingFAQs.map(faq => ({ q: faq.question, a: faq.answer }))
 
 export const metadata = {
-  title: 'Microneedling | Ely Aesthetics'
+  title: 'Customized Facial | Ely Aesthetics'
 }
 
-export default function MicroneedlingPage() {
+export default function CustomizedFacialPage() {
   return (
     <div className="service-page">
       <Nav />
       <section className="service-hero">
-        <img src="/images/services/microneedling-hero.jpg" alt="Microneedling" className="hero-image" />
+        <img src="/images/services/customized-facial-hero.jpg" alt="Customized Facial" className="hero-image" />
         <div className="hero-content">
-          <h1>Microneedling</h1>
-          <p>Stimulate collagen for smoother skin</p>
+          <h1>Customized Facial</h1>
+          <p>Personalized care for your skin</p>
         </div>
       </section>
 
@@ -72,13 +70,13 @@ export default function MicroneedlingPage() {
         </section>
 
         <figure className="before-after">
-          <img src="/images/services/microneedling-beforeafter.jpg" alt="Before and after Microneedling result" />
+          <img src="/images/services/customized-facial-beforeafter.jpg" alt="Before and after Customized Facial result" />
         </figure>
 
-        {serviceFAQs.length > 0 && (
+        {customizedFacialFAQs.length > 0 && (
           <section>
             <h2 className="faq-heading">Frequently Asked Questions</h2>
-            <AccordionFAQ faqs={serviceFAQs} />
+            <AccordionFAQ faqs={customizedFacialFAQs} />
           </section>
         )}
 

@@ -4,63 +4,61 @@ import Nav from '../../components/Nav'
 const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
 const benefits = [
-  'Stimulates collagen production',
-  'Minimizes scars and pores',
-  'Smooths fine lines'
+  'Brightens dull skin',
+  'Targets dark spots',
+  'Minimal flaking'
 ]
 
 const description = [
-  "Microneedling uses tiny needles to trigger your skin's natural healing response for a firmer, more even complexion.",
-  'Treatments are comfortable with numbing cream and have minimal downtime.'
+  'The Skinbetter Peel gently resurfaces using medical grade acids for improved tone and clarity.',
+  'A series of peels can dramatically smooth texture and fade pigmentation.'
 ]
 
 const testimonial = {
-  text: 'Microneedling with Elyzia transformed my acne scars!',
-  author: 'Sofia R.'
+  text: 'My skin glows after each peel!',
+  author: 'Andrea M.'
 }
-
-const microneedlingFAQs = [
+const skinbetterPeelFAQs = [
   {
-    question: 'What is a Skinbetter Peel?',
-    answer: 'The Skinbetter Peel is a professional chemical exfoliation treatment designed to refresh and brighten your skin with minimal irritation. It targets uneven tone, fine lines, and dullness.'
+    q: 'What is a Skinbetter Peel?',
+    a: 'The Skinbetter Peel is a professional chemical exfoliation treatment designed to refresh and brighten your skin with minimal irritation. It targets uneven tone, fine lines, and dullness.'
   },
   {
-    question: 'Will my skin peel after this treatment?',
-    answer: 'Some clients may experience light flaking or mild peeling 2\u20134 days after treatment. Many see a healthy glow without visible peeling.'
+    q: 'Will my skin peel after this treatment?',
+    a: 'Some clients may experience light flaking or mild peeling 2\u20134 days after treatment. Many see a healthy glow without visible peeling.'
   },
   {
-    question: 'How soon will I see results?',
-    answer: 'Results\u2014such as smoother, more radiant skin\u2014can often be seen within a week, with continued improvement over time.'
+    q: 'How soon will I see results?',
+    a: 'Results\u2014such as smoother, more radiant skin\u2014can often be seen within a week, with continued improvement over time.'
   },
   {
-    question: 'Is there any downtime?',
-    answer: 'Minimal. You may experience slight redness or tightness for a day or two. Most clients return to normal activities immediately.'
+    q: 'Is there any downtime?',
+    a: 'Minimal. You may experience slight redness or tightness for a day or two. Most clients return to normal activities immediately.'
   },
   {
-    question: 'Can all skin types get a Skinbetter Peel?',
-    answer: 'Yes, but your esthetician will assess your skin during your consultation to ensure it\u2019s the right fit.'
+    q: 'Can all skin types get a Skinbetter Peel?',
+    a: 'Yes, but your esthetician will assess your skin during your consultation to ensure it\u2019s the right fit.'
   },
   {
-    question: 'How often can I get this peel?',
-    answer: 'For best results, we recommend a series spaced 4\u20136 weeks apart, based on your provider\u2019s advice.'
+    q: 'How often can I get this peel?',
+    a: 'For best results, we recommend a series spaced 4\u20136 weeks apart, based on your provider\u2019s advice.'
   }
 ]
 
-const serviceFAQs = microneedlingFAQs.map(faq => ({ q: faq.question, a: faq.answer }))
 
 export const metadata = {
-  title: 'Microneedling | Ely Aesthetics'
+  title: 'Skinbetter Peel | Ely Aesthetics'
 }
 
-export default function MicroneedlingPage() {
+export default function SkinbetterPeelPage() {
   return (
     <div className="service-page">
       <Nav />
       <section className="service-hero">
-        <img src="/images/services/microneedling-hero.jpg" alt="Microneedling" className="hero-image" />
+        <img src="/images/services/skinbetter-peel-hero.jpg" alt="Skinbetter Peel" className="hero-image" />
         <div className="hero-content">
-          <h1>Microneedling</h1>
-          <p>Stimulate collagen for smoother skin</p>
+          <h1>Skinbetter Peel</h1>
+          <p>Refresh and brighten your complexion</p>
         </div>
       </section>
 
@@ -77,13 +75,13 @@ export default function MicroneedlingPage() {
         </section>
 
         <figure className="before-after">
-          <img src="/images/services/microneedling-beforeafter.jpg" alt="Before and after Microneedling result" />
+          <img src="/images/services/skinbetter-peel-beforeafter.jpg" alt="Before and after Skinbetter Peel result" />
         </figure>
 
-        {serviceFAQs.length > 0 && (
+        {skinbetterPeelFAQs.length > 0 && (
           <section>
             <h2 className="faq-heading">Frequently Asked Questions</h2>
-            <AccordionFAQ faqs={serviceFAQs} />
+            <AccordionFAQ faqs={skinbetterPeelFAQs} />
           </section>
         )}
 
