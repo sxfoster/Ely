@@ -1,3 +1,4 @@
+'use client'
 import AccordionFAQ from '@/components/AccordionFAQ'
 import { notFound } from 'next/navigation'
 
