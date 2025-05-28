@@ -1,13 +1,17 @@
 import AccordionFAQ from '@/components/AccordionFAQ'
 import Nav from '../../components/Nav'
 
-const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
+// About text for this service
+const aboutText = `The Skinbetter Peel gently resurfaces using medical grade acids for improved tone and clarity. A series of peels can dramatically smooth texture and fade pigmentation.`
 
+// Key benefits for this service
 const benefits = [
   'Brightens dull skin',
   'Targets dark spots',
   'Minimal flaking'
 ]
+
+const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
 const description = [
   'The Skinbetter Peel gently resurfaces using medical grade acids for improved tone and clarity.',

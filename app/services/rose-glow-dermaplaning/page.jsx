@@ -1,13 +1,17 @@
 import AccordionFAQ from '@/components/AccordionFAQ'
 import Nav from '../../components/Nav'
 
-const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
+// About text for this service
+const aboutText = `Dermaplaning gently exfoliates dead skin cells and removes fine hair, revealing a smoother, brighter complexion.`
 
+// Key benefits for this service
 const benefits = [
   'Removes peach fuzz',
   'Improves product absorption',
   'Instantly brighter skin'
 ]
+
+const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
 const description = [
   'Dermaplaning gently exfoliates dead skin cells and removes fine hair, revealing a smoother, brighter complexion.'

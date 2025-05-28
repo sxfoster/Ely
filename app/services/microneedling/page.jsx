@@ -1,13 +1,17 @@
 import AccordionFAQ from '@/components/AccordionFAQ'
 import Nav from '../../components/Nav'
 
-const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
+// About text for this service
+const aboutText = `Microneedling stimulates collagen production, improving skin texture and reducing fine lines for a youthful appearance.`
 
+// Key benefits for this service
 const benefits = [
   'Stimulates collagen production',
   'Minimizes scars and pores',
   'Smooths fine lines'
 ]
+
+const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
 const description = [
   'Microneedling stimulates collagen production, improving skin texture and reducing fine lines for a youthful appearance.'
