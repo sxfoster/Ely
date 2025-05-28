@@ -4,9 +4,9 @@ import Nav from '../../components/Nav'
 const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
 const benefits = [
-  'Stimulates collagen production',
-  'Minimizes scars and pores',
-  'Smooths fine lines'
+  'Removes peach fuzz',
+  'Improves product absorption',
+  'Instantly brighter skin'
 ]
 
 const description = [
@@ -14,48 +14,46 @@ const description = [
 ]
 
 const testimonial = {
-  text: 'Microneedling with Elyzia transformed my acne scars!',
-  author: 'Sofia R.'
+  text: "Best facial I've had—my makeup glides on flawlessly!",
+  author: 'Melissa T.'
 }
-
-const microneedlingFAQs = [
+const roseGlowDermaplaningFAQs = [
   {
-    question: 'What is dermaplaning?',
-    answer: 'Dermaplaning gently exfoliates the skin\u2019s surface and removes peach fuzz using a specialized blade, leaving your skin ultra-smooth and radiant.'
+    q: 'What is dermaplaning?',
+    a: 'Dermaplaning gently exfoliates the skin\u2019s surface and removes peach fuzz using a specialized blade, leaving your skin ultra-smooth and radiant.'
   },
   {
-    question: 'Does it hurt or cause cuts?',
-    answer: 'No, the treatment is painless when performed by a trained professional. You may feel a gentle scraping sensation.'
+    q: 'Does it hurt or cause cuts?',
+    a: 'No, the treatment is painless when performed by a trained professional. You may feel a gentle scraping sensation.'
   },
   {
-    question: 'Will my hair grow back thicker?',
-    answer: 'No\u2014dermaplaning does not change hair growth patterns or thickness.'
+    q: 'Will my hair grow back thicker?',
+    a: 'No\u2014dermaplaning does not change hair growth patterns or thickness.'
   },
   {
-    question: 'How often should I get dermaplaning?',
-    answer: 'Many clients enjoy a treatment every 4\u20136 weeks, but your provider can recommend the best schedule.'
+    q: 'How often should I get dermaplaning?',
+    a: 'Many clients enjoy a treatment every 4\u20136 weeks, but your provider can recommend the best schedule.'
   },
   {
-    question: 'What should I avoid after treatment?',
-    answer: 'Skip harsh scrubs or actives for a few days and apply sunscreen daily.'
+    q: 'What should I avoid after treatment?',
+    a: 'Skip harsh scrubs or actives for a few days and apply sunscreen daily.'
   }
 ]
 
-const serviceFAQs = microneedlingFAQs.map(faq => ({ q: faq.question, a: faq.answer }))
 
 export const metadata = {
-  title: 'Microneedling | Ely Aesthetics'
+  title: 'Rose Glow Dermaplaning Facial | Ely Aesthetics'
 }
 
-export default function MicroneedlingPage() {
+export default function RoseGlowDermaplaningPage() {
   return (
     <div className="service-page">
       <Nav />
       <section className="service-hero">
-        <img src="/images/services/microneedling-hero.jpg" alt="Microneedling" className="hero-image" />
+        <img src="/images/services/rose-glow-dermaplaning-hero.jpg" alt="Rose Glow Dermaplaning Facial" className="hero-image" />
         <div className="hero-content">
-          <h1>Microneedling</h1>
-          <p>Stimulate collagen for smoother skin</p>
+          <h1>Rose Glow Dermaplaning Facial</h1>
+          <p>Reveal a silky smooth canvas</p>
         </div>
       </section>
 
@@ -72,13 +70,13 @@ export default function MicroneedlingPage() {
         </section>
 
         <figure className="before-after">
-          <img src="/images/services/microneedling-beforeafter.jpg" alt="Before and after Microneedling result" />
+          <img src="/images/services/rose-glow-dermaplaning-beforeafter.jpg" alt="Before and after Rose Glow Dermaplaning Facial result" />
         </figure>
 
-        {serviceFAQs.length > 0 && (
+        {roseGlowDermaplaningFAQs.length > 0 && (
           <section>
             <h2 className="faq-heading">Frequently Asked Questions</h2>
-            <AccordionFAQ faqs={serviceFAQs} />
+            <AccordionFAQ faqs={roseGlowDermaplaningFAQs} />
           </section>
         )}
 

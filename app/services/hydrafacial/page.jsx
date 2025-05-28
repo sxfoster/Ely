@@ -4,9 +4,9 @@ import Nav from '../../components/Nav'
 const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
 const benefits = [
-  'Stimulates collagen production',
-  'Minimizes scars and pores',
-  'Smooths fine lines'
+  'Deeply cleanses pores',
+  'Hydrates and plumps',
+  'Delivers antioxidants'
 ]
 
 const description = [
@@ -14,48 +14,46 @@ const description = [
 ]
 
 const testimonial = {
-  text: 'Microneedling with Elyzia transformed my acne scars!',
-  author: 'Sofia R.'
+  text: 'My skin has never looked better after a Hydrafacial!',
+  author: 'Jason P.'
 }
-
-const microneedlingFAQs = [
+const hydrafacialFAQs = [
   {
-    question: 'What is a Platinum Hydrafacial?',
-    answer: 'The Platinum Hydrafacial is an advanced, multi-step facial treatment that cleanses, extracts, hydrates, and nourishes your skin in one session.'
+    q: 'What is a Platinum Hydrafacial?',
+    a: 'The Platinum Hydrafacial is an advanced, multi-step facial treatment that cleanses, extracts, hydrates, and nourishes your skin in one session.'
   },
   {
-    question: 'Is there any discomfort during the Hydrafacial?',
-    answer: 'Most clients find it relaxing and pain-free, with a gentle suction and cool hydration.'
+    q: 'Is there any discomfort during the Hydrafacial?',
+    a: 'Most clients find it relaxing and pain-free, with a gentle suction and cool hydration.'
   },
   {
-    question: 'How long do results last?',
-    answer: 'Skin appears fresh and glowing for a week or more. Regular treatments help maintain optimal skin health.'
+    q: 'How long do results last?',
+    a: 'Skin appears fresh and glowing for a week or more. Regular treatments help maintain optimal skin health.'
   },
   {
-    question: 'Is this treatment safe for sensitive skin?',
-    answer: 'Yes! The Hydrafacial can be customized for sensitive or problem-prone skin.'
+    q: 'Is this treatment safe for sensitive skin?',
+    a: 'Yes! The Hydrafacial can be customized for sensitive or problem-prone skin.'
   },
   {
-    question: 'Can I wear makeup after?',
-    answer: 'It\u2019s best to wait a few hours, but most clients can apply makeup later the same day.'
+    q: 'Can I wear makeup after?',
+    a: 'It\u2019s best to wait a few hours, but most clients can apply makeup later the same day.'
   }
 ]
 
-const serviceFAQs = microneedlingFAQs.map(faq => ({ q: faq.question, a: faq.answer }))
 
 export const metadata = {
-  title: 'Microneedling | Ely Aesthetics'
+  title: 'Platinum Hydrafacial | Ely Aesthetics'
 }
 
-export default function MicroneedlingPage() {
+export default function HydrafacialPage() {
   return (
     <div className="service-page">
       <Nav />
       <section className="service-hero">
-        <img src="/images/services/microneedling-hero.jpg" alt="Microneedling" className="hero-image" />
+        <img src="/images/services/hydrafacial-hero.jpg" alt="Platinum Hydrafacial" className="hero-image" />
         <div className="hero-content">
-          <h1>Microneedling</h1>
-          <p>Stimulate collagen for smoother skin</p>
+          <h1>Platinum Hydrafacial</h1>
+          <p>Deep cleanse and intense hydration</p>
         </div>
       </section>
 
@@ -72,13 +70,13 @@ export default function MicroneedlingPage() {
         </section>
 
         <figure className="before-after">
-          <img src="/images/services/microneedling-beforeafter.jpg" alt="Before and after Microneedling result" />
+          <img src="/images/services/hydrafacial-beforeafter.jpg" alt="Before and after Platinum Hydrafacial result" />
         </figure>
 
-        {serviceFAQs.length > 0 && (
+        {hydrafacialFAQs.length > 0 && (
           <section>
             <h2 className="faq-heading">Frequently Asked Questions</h2>
-            <AccordionFAQ faqs={serviceFAQs} />
+            <AccordionFAQ faqs={hydrafacialFAQs} />
           </section>
         )}
 
