@@ -1,13 +1,17 @@
 import AccordionFAQ from '@/components/AccordionFAQ'
 import Nav from '../../components/Nav'
 
-const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
+// About text for this service
+const aboutText = `Tailored facials combining various treatments to address individual skin concerns and enhance overall skin health.`
 
+// Key benefits for this service
 const benefits = [
   'Tailored to your needs',
   'Includes relaxing massage',
   'Targets hydration or blemishes'
 ]
+
+const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
 const description = [
   'Tailored facials combining various treatments to address individual skin concerns and enhance overall skin health.'

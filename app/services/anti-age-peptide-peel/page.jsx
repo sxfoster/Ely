@@ -1,13 +1,17 @@
 import AccordionFAQ from '@/components/AccordionFAQ'
 import Nav from '../../components/Nav'
 
-const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
+// About text for this service
+const aboutText = `This treatment pairs mild exfoliation with powerful peptides to promote firm, supple skin. Regular sessions smooth wrinkles and even out tone.`
 
+// Key benefits for this service
 const benefits = [
   'Peptide-rich formulation',
   'Softens fine lines',
   'Boosts radiance'
 ]
+
+const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
 const description = [
   'This treatment pairs mild exfoliation with powerful peptides to promote firm, supple skin.',
