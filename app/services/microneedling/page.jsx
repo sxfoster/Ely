@@ -1,5 +1,6 @@
 import AccordionFAQ from '@/components/AccordionFAQ'
 import Nav from '../../components/Nav'
+import ServiceHero from '@/components/ServiceHero'
 
 const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
@@ -65,13 +66,14 @@ export default function MicroneedlingPage() {
   return (
     <div className="service-page">
       <Nav />
-      <section className="service-hero">
-        <img src="/images/services/microneedling-hero.jpg" alt="Microneedling" className="hero-image" />
-        <div className="hero-content">
-          <h1>Microneedling</h1>
-          <p>Stimulate collagen for smoother skin</p>
-        </div>
-      </section>
+      <ServiceHero
+        serviceName="Microneedling"
+        headline="Stimulate collagen for smoother skin"
+        description={description[0]}
+        imageSrc="/images/microneedling-before-after.jpeg"
+        imageAlt="Before and after microneedling results"
+        onCtaClick="https://www.vagaro.com/elyaesthetics"
+      />
 
       <div className="service-content container">
         <section>

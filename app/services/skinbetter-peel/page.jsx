@@ -1,5 +1,6 @@
 import AccordionFAQ from '@/components/AccordionFAQ'
 import Nav from '../../components/Nav'
+import ServiceHero from '@/components/ServiceHero'
 
 const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
@@ -54,13 +55,14 @@ export default function SkinbetterPeelPage() {
   return (
     <div className="service-page">
       <Nav />
-      <section className="service-hero">
-        <img src="/images/services/skinbetter-peel-hero.jpg" alt="Skinbetter Peel" className="hero-image" />
-        <div className="hero-content">
-          <h1>Skinbetter Peel</h1>
-          <p>Refresh and brighten your complexion</p>
-        </div>
-      </section>
+      <ServiceHero
+        serviceName="Skinbetter Peel"
+        headline="Refresh and brighten your complexion"
+        description={description[0]}
+        imageSrc="/images/peel.jpeg"
+        imageAlt="Before and after skinbetter peel results"
+        onCtaClick="https://www.vagaro.com/elyaesthetics"
+      />
 
       <div className="service-content container">
         <section>
