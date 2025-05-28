@@ -62,13 +62,7 @@ export default function SkinbetterPeelPage() {
         imageSrc="/images/peel.jpeg"
         imageAlt="Skinbetter Peel"
         ctaText="Book Now"
-        onCtaClick={() =>
-          window.open(
-            'https://www.vagaro.com/elyaesthetics',
-            '_blank',
-            'noopener'
-          )
-        }
+        ctaHref="https://www.vagaro.com/elyaesthetics"
       />
 
       <div className="service-content container">

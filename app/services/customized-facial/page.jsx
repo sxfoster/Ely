@@ -57,13 +57,7 @@ export default function CustomizedFacialPage() {
         imageSrc="/images/before-after-1.jpeg"
         imageAlt="Customized Facial"
         ctaText="Book Now"
-        onCtaClick={() =>
-          window.open(
-            'https://www.vagaro.com/elyaesthetics',
-            '_blank',
-            'noopener'
-          )
-        }
+        ctaHref="https://www.vagaro.com/elyaesthetics"
       />
 
       <div className="service-content container">

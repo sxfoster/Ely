@@ -1,4 +1,7 @@
-'use client'
+'use client';
+
+import React from 'react';
+import styles from './ServiceHero.module.css';
 
 export default function ServiceHero({
   serviceName,
@@ -6,24 +9,32 @@ export default function ServiceHero({
   description,
   imageSrc,
   imageAlt,
-  ctaText,
-  onCtaClick,
+  ctaText = "Book Now",
+  ctaHref = "#",
 }) {
   return (
-    <section className="service-hero">
-      {imageSrc && (
-        <img src={imageSrc} alt={imageAlt || ''} className="hero-image" />
-      )}
-      <div className="hero-content">
-        {serviceName && <h1>{serviceName}</h1>}
-        {headline && <p>{headline}</p>}
-        {description && <p>{description}</p>}
-        {ctaText && (
-          <button className="btn btn-primary" onClick={onCtaClick}>
-            {ctaText}
-          </button>
-        )}
+    <section className={styles.serviceHero}>
+      <h1 className={styles.heroTitle}>{serviceName}</h1>
+      <h2 className={styles.heroHeadline}>{headline}</h2>
+      <p className={styles.heroDesc}>{description}</p>
+      <div className={styles.heroImageWrapper}>
+        <img
+          src={imageSrc}
+          alt={imageAlt}
+          className={styles.heroImage}
+          loading="eager"
+        />
+        <div className={styles.heroImageOverlay} aria-hidden="true"></div>
       </div>
+      <a
+        href={ctaHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.btnPrimary}
+        aria-label={ctaText}
+      >
+        {ctaText}
+      </a>
     </section>
-  )
+  );
 }

@@ -57,13 +57,7 @@ export default function AntiAgePeptidePeelPage() {
         imageSrc="/images/anti_age.jpeg"
         imageAlt="Anti-Age Peptide Peel"
         ctaText="Book Now"
-        onCtaClick={() =>
-          window.open(
-            'https://www.vagaro.com/elyaesthetics',
-            '_blank',
-            'noopener'
-          )
-        }
+        ctaHref="https://www.vagaro.com/elyaesthetics"
       />
 
       <div className="service-content container">

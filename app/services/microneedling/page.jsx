@@ -73,13 +73,7 @@ export default function MicroneedlingPage() {
         imageSrc="/images/microneedling-before-after.jpeg"
         imageAlt="Microneedling"
         ctaText="Book Now"
-        onCtaClick={() =>
-          window.open(
-            'https://www.vagaro.com/elyaesthetics',
-            '_blank',
-            'noopener'
-          )
-        }
+        ctaHref="https://www.vagaro.com/elyaesthetics"
       />
 
       <div className="service-content container">
