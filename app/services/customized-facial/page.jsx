@@ -1,6 +1,5 @@
 import AccordionFAQ from '@/components/AccordionFAQ'
 import Nav from '../../components/Nav'
-import ServiceHero from '@/components/ServiceHero'
 
 const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
@@ -50,15 +49,6 @@ export default function CustomizedFacialPage() {
   return (
     <div className="service-page">
       <Nav />
-      <ServiceHero
-        serviceName="Customized Facial"
-        headline="Personalized care for your skin"
-        description={description[0]}
-        imageSrc="/images/before-after-1.jpeg"
-        imageAlt="Customized Facial"
-        ctaText="Book Now"
-        ctaHref="https://www.vagaro.com/elyaesthetics"
-      />
 
       <div className="service-content container">
         <section>
