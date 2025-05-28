@@ -1,0 +1,16 @@
+.aboutSection {
+  padding: 2rem 1rem;
+}
+
+.benefitsSection {
+  padding: 2rem 1rem;
+}
+
+.benefitsList {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+.faqSection {
+  padding: 2rem 1rem;
+}

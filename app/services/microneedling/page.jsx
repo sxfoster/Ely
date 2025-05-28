@@ -1,14 +1,16 @@
 import AccordionFAQ from '@/components/AccordionFAQ'
 import Nav from '../../components/Nav'
+import styles from './ServicePage.module.css'
 
-// About text for this service
-const aboutText = `Microneedling stimulates collagen production, improving skin texture and reducing fine lines for a youthful appearance.`
+// About text for Microneedling
+const aboutText = `Our Microneedling treatment, also known as Collagen Induction Therapy, is a highly effective method that tightens, restores, rejuvenates, and diminishes the signs of aging using our medical grade, FDA approved Skinpen. By creating thousands of micro-channels to puncture the skin, this treatment ensures even and luminous healed skin. Recommended in a series of three sessions, 4 weeks apart.`;
 
-// Key benefits for this service
+// Key benefits for Microneedling
 const benefits = [
-  'Stimulates collagen production',
-  'Minimizes scars and pores',
-  'Smooths fine lines'
+  "Stimulates natural collagen production",
+  "Improves skin texture and tone",
+  "Reduces appearance of fine lines and wrinkles",
+  "Enhances absorption of serums and skincare products"
 ]
 
 const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
@@ -71,10 +73,17 @@ export default function MicroneedlingPage() {
       <Nav />
 
       <div className="service-content container">
-        <section>
+        <section className={styles.aboutSection}>
+          <h2>About Microneedling</h2>
+          <p>{aboutText}</p>
+        </section>
+
+        <section className={styles.benefitsSection}>
           <h2>Key Benefits</h2>
-          <ul>
-            {benefits.map((b) => <li key={b}>{b}</li>)}
+          <ul className={styles.benefitsList}>
+            {benefits.map((b, i) => (
+              <li key={i}>{b}</li>
+            ))}
           </ul>
         </section>
 
@@ -87,8 +96,8 @@ export default function MicroneedlingPage() {
         </figure>
 
         {microneedlingFAQs.length > 0 && (
-          <section>
-            <h2 className="faq-heading">Frequently Asked Questions</h2>
+          <section className={styles.faqSection}>
+            <h2>Frequently Asked Questions</h2>
             <AccordionFAQ faqs={microneedlingFAQs} />
           </section>
         )}
