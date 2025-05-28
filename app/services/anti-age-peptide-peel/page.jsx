@@ -1,5 +1,6 @@
 import AccordionFAQ from '@/components/AccordionFAQ'
 import Nav from '../../components/Nav'
+import ServiceHero from '@/components/ServiceHero'
 
 const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
@@ -49,13 +50,14 @@ export default function AntiAgePeptidePeelPage() {
   return (
     <div className="service-page">
       <Nav />
-      <section className="service-hero">
-        <img src="/images/services/anti-age-peptide-peel-hero.jpg" alt="Anti-Age Peptide Peel" className="hero-image" />
-        <div className="hero-content">
-          <h1>Anti-Age Peptide Peel</h1>
-          <p>Gentle exfoliation with age-defying peptides</p>
-        </div>
-      </section>
+      <ServiceHero
+        serviceName="Anti-Age Peptide Peel"
+        headline="Gentle exfoliation with age-defying peptides"
+        description={description[0]}
+        imageSrc="/images/anti_age.jpeg"
+        imageAlt="Before and after anti-age peptide peel results"
+        onCtaClick="https://www.vagaro.com/elyaesthetics"
+      />
 
       <div className="service-content container">
         <section>

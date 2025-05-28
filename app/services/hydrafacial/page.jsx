@@ -1,5 +1,6 @@
 import AccordionFAQ from '@/components/AccordionFAQ'
 import Nav from '../../components/Nav'
+import ServiceHero from '@/components/ServiceHero'
 
 const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
@@ -49,13 +50,14 @@ export default function HydrafacialPage() {
   return (
     <div className="service-page">
       <Nav />
-      <section className="service-hero">
-        <img src="/images/services/hydrafacial-hero.jpg" alt="Platinum Hydrafacial" className="hero-image" />
-        <div className="hero-content">
-          <h1>Platinum Hydrafacial</h1>
-          <p>Deep cleanse and intense hydration</p>
-        </div>
-      </section>
+      <ServiceHero
+        serviceName="Platinum Hydrafacial"
+        headline="Deep cleanse and intense hydration"
+        description={description[0]}
+        imageSrc="/images/hydrafacial.jpg"
+        imageAlt="Before and after Platinum Hydrafacial results"
+        onCtaClick="https://www.vagaro.com/elyaesthetics"
+      />
 
       <div className="service-content container">
         <section>

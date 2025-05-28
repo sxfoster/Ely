@@ -1,5 +1,6 @@
 import AccordionFAQ from '@/components/AccordionFAQ'
 import { notFound } from 'next/navigation'
+import ServiceHero from '@/components/ServiceHero'
 
 const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
@@ -111,6 +112,15 @@ const services = {
   }
 }
 
+const serviceImages = {
+  microneedling: '/images/microneedling-before-after.jpeg',
+  'skinbetter-peel': '/images/peel.jpeg',
+  'anti-age-peptide-peel': '/images/anti_age.jpeg',
+  'rose-glow-dermaplaning': '/images/dermaplaning-before-after.jpeg',
+  hydrafacial: '/images/hydrafacial.jpg',
+  'customized-facial': '/images/before-after-1.jpeg'
+}
+
 export function generateStaticParams() {
   return Object.keys(services).map(slug => ({ slug }))
 }
@@ -132,17 +142,19 @@ export default function ServicePage({ params }) {
 
   const { name, headline, benefits, description, faqs, testimonial } = data
   const serviceFAQs = faqs
+  const imageSrc = serviceImages[params.slug]
 
   return (
     <div className="service-page">
       <Nav />
-      <section className="service-hero">
-        <img src={`/images/services/${params.slug}-hero.jpg`} alt={name} className="hero-image" />
-        <div className="hero-content">
-          <h1>{name}</h1>
-          {headline && <p>{headline}</p>}
-        </div>
-      </section>
+      <ServiceHero
+        serviceName={name}
+        headline={headline}
+        description={description[0]}
+        imageSrc={imageSrc}
+        imageAlt={`Before and after ${name} results`}
+        onCtaClick="https://www.vagaro.com/elyaesthetics"
+      />
 
       <div className="service-content container">
         <section>
