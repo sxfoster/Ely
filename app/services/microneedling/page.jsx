@@ -79,10 +79,24 @@ export default function MicroneedlingPage() {
         </section>
 
         <section className={styles.benefitsSection}>
-          <h2>Key Benefits</h2>
+          <h2 className={styles.benefitsTitle}>Key Benefits</h2>
           <ul className={styles.benefitsList}>
-            {benefits.map((b, i) => (
-              <li key={i}>{b}</li>
+            {[
+              "Tightens & restores skin",
+              "Rejuvenates & diminishes aging signs",
+              "Ensures even & luminous skin",
+              "Medical grade Skinpen used",
+            ].map((text, i) => (
+              <li key={i} className={styles.benefitItem}>
+                <svg
+                  className={styles.benefitIcon}
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 16.17l-3.5-3.5L4 14.17 9 19.17 20 8.17 18.59 6.75z" />
+                </svg>
+                <span className={styles.benefitText}>{text}</span>
+              </li>
             ))}
           </ul>
         </section>
