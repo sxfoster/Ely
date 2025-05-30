@@ -124,6 +124,7 @@ export function generateMetadata({ params }) {
 }
 
 import Nav from '../../components/Nav'
+import styles from '../ServicePage.module.css'
 
 export default function ServicePage({ params }) {
   const data = services[params.slug]
@@ -138,10 +139,26 @@ export default function ServicePage({ params }) {
       <Nav />
 
       <div className="service-content container">
-        <section>
-          <h2>Key Benefits</h2>
-          <ul>
-            {benefits.map((b) => <li key={b}>{b}</li>)}
+        <section className={styles.aboutSection}>
+          <h2>About {name}</h2>
+          <p>{headline}</p>
+        </section>
+
+        <section className={styles.benefitsSection}>
+          <h2 className={styles.benefitsTitle}>Key Benefits</h2>
+          <ul className={styles.benefitsList}>
+            {benefits.map((b, i) => (
+              <li key={i} className={styles.benefitItem}>
+                <svg
+                  className={styles.benefitIcon}
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 16.17l-3.5-3.5L4 14.17 9 19.17 20 8.17 18.59 6.75z" />
+                </svg>
+                <span className={styles.benefitText}>{b}</span>
+              </li>
+            ))}
           </ul>
         </section>
 
@@ -154,8 +171,8 @@ export default function ServicePage({ params }) {
         </figure>
 
         {serviceFAQs.length > 0 && (
-          <section>
-            <h2 className="faq-heading">Frequently Asked Questions</h2>
+          <section className={styles.faqSection}>
+            <h2>Frequently Asked Questions</h2>
             <AccordionFAQ faqs={serviceFAQs} />
           </section>
         )}
