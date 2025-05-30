@@ -18,10 +18,6 @@ const description = [
   'A series of peels can dramatically smooth texture and fade pigmentation.'
 ]
 
-const testimonial = {
-  text: 'My skin glows after each peel!',
-  author: 'Andrea M.'
-}
 const skinbetterPeelFAQs = [
   {
     q: 'What is a Skinbetter Peel?',
@@ -86,10 +82,6 @@ export default function SkinbetterPeelPage() {
           {description.map((p, i) => <p key={i}>{p}</p>)}
         </section>
 
-        <figure className="before-after">
-          <img src="/images/services/skinbetter-peel-beforeafter.jpg" alt="Before and after Skinbetter Peel result" />
-        </figure>
-
         {skinbetterPeelFAQs.length > 0 && (
           <section className={styles.faqSection}>
             <h2>Frequently Asked Questions</h2>
@@ -97,10 +89,6 @@ export default function SkinbetterPeelPage() {
           </section>
         )}
 
-        <section className="testimonial">
-          <blockquote>{testimonial.text}</blockquote>
-          <cite>- {testimonial.author}</cite>
-        </section>
       </div>
 
       <div className="sticky-cta">

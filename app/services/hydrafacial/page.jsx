@@ -17,10 +17,6 @@ const description = [
   'Hydrafacials deeply cleanse, exfoliate, and hydrate the skin, effectively addressing acne, dryness, and signs of aging.'
 ]
 
-const testimonial = {
-  text: 'My skin has never looked better after a Hydrafacial!',
-  author: 'Jason P.'
-}
 const hydrafacialFAQs = [
   {
     q: 'What is a Platinum Hydrafacial?',
@@ -81,21 +77,12 @@ export default function HydrafacialPage() {
           {description.map((p, i) => <p key={i}>{p}</p>)}
         </section>
 
-        <figure className="before-after">
-          <img src="/images/services/hydrafacial-beforeafter.jpg" alt="Before and after Platinum Hydrafacial result" />
-        </figure>
-
         {hydrafacialFAQs.length > 0 && (
           <section className={styles.faqSection}>
             <h2>Frequently Asked Questions</h2>
             <AccordionFAQ faqs={hydrafacialFAQs} />
           </section>
         )}
-
-        <section className="testimonial">
-          <blockquote>{testimonial.text}</blockquote>
-          <cite>- {testimonial.author}</cite>
-        </section>
       </div>
 
       <div className="sticky-cta">
