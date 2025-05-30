@@ -46,7 +46,7 @@ if (closeBtn && modal) {
 }
 
 // Booking dialog logic
-const openBookingBtns  = document.querySelectorAll('#open-booking-dialog');
+const openBookingBtns  = document.querySelectorAll('.js-open-booking-dialog');
 const menuBookingBtn = document.getElementById('menu-open-booking-dialog');
 const bookingModal     = document.getElementById('booking-modal');
 const bookingCloseBtn  = document.querySelector('.booking-close');

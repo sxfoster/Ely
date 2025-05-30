@@ -82,8 +82,7 @@ export default function SkinbetterPeelPage() {
 
       <div className="sticky-cta">
         <button
-          id="open-booking-dialog"
-          className="btn btn-primary"
+          className="btn btn-primary js-open-booking-dialog"
           aria-label="Open booking instructions"
         >
           Book Now
