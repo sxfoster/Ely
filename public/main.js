@@ -46,12 +46,10 @@ if (closeBtn && modal) {
 }
 
 // Booking dialog logic
-const openBookingBtns  = document.querySelectorAll('.js-open-booking-dialog');
-// Specifically target the "Book Now" link inside the mobile menu so we can
-// close the menu before opening the booking modal. `getElementById` was used
-// previously which always returned `null` because this element uses a class
-// selector, not an id.
-const menuBookingBtn = document.querySelector('.menu-items .js-open-booking-dialog');
+// Event delegation is used for booking buttons so it works on pages loaded
+// after client-side navigation.
+// Instead of querying elements only once, we listen for clicks anywhere on the
+// document and check if the target matches our selector.
 const bookingModal     = document.getElementById('booking-modal');
 const bookingCloseBtn  = document.querySelector('.booking-close');
 const bookingContinue  = document.getElementById('booking-continue');
@@ -70,24 +68,16 @@ function hideBookingModal() {
   }
 }
 
-// 1) Open the dialog
-if (openBookingBtns && bookingModal) {
-  openBookingBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      showBookingModal();
-    });
-  });
-}
-
-if (menuBookingBtn && bookingModal) {
-  menuBookingBtn.addEventListener('click', e => {
+// 1) Open the dialog using event delegation so newly added buttons also work
+if (bookingModal) {
+  document.addEventListener('click', e => {
+    const trigger = e.target.closest('.js-open-booking-dialog');
+    if (!trigger) return;
     e.preventDefault();
-    // close the mobile menu
-    if (menuItemsContainer) {
+    // Close the mobile menu if the click originated from inside it
+    if (menuItemsContainer && trigger.closest('.menu-items')) {
       menuItemsContainer.classList.remove('active');
     }
-    // open the booking dialog
     showBookingModal();
   });
 }
