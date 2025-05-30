@@ -29,7 +29,7 @@ const services = [
     id: 4,
     name: "Dermaplaning",
     image: "/images/dermaplaning-before-after.jpeg",
-    slug: "dermaplaning",
+    slug: "rose-glow-dermaplaning",
   },
   {
     id: 5,
