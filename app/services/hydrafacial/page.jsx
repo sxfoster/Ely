@@ -15,24 +15,44 @@ const benefits = [
 
 const hydrafacialFAQs = [
   {
-    q: 'What is a Platinum Hydrafacial?',
-    a: 'The Platinum Hydrafacial is an advanced, multi-step facial treatment that cleanses, extracts, hydrates, and nourishes your skin in one session.'
+    q: 'What is a HydraFacial?',
+    a: 'A HydraFacial is a non-invasive, multi-step treatment that cleanses, exfoliates, extracts, hydrates and protects the skin with antioxidants, leaving it radiant without downtime.'
   },
   {
-    q: 'Is there any discomfort during the Hydrafacial?',
-    a: 'Most clients find it relaxing and pain-free, with a gentle suction and cool hydration.'
+    q: 'How does a HydraFacial work?',
+    a: 'The procedure includes cleansing and exfoliation, a gentle acid peel, painless suction extractions and infusion of hydrating serums using vortex-fusion technology.'
   },
   {
-    q: 'How long do results last?',
-    a: 'Skin appears fresh and glowing for a week or more. Regular treatments help maintain optimal skin health.'
+    q: 'What skin concerns can a HydraFacial address?',
+    a: 'HydraFacials can improve fine lines, firmness, tone, texture, brown spots, oily or congested skin and enlarged pores.'
   },
   {
-    q: 'Is this treatment safe for sensitive skin?',
-    a: 'Yes! The Hydrafacial can be customized for sensitive or problem-prone skin.'
+    q: 'Is a HydraFacial suitable for all skin types?',
+    a: 'Yes. It can be customized for any skin type, even sensitive skin, by adjusting the serums and exfoliation levels.'
   },
   {
-    q: 'Can I wear makeup after?',
-    a: 'It\u2019s best to wait a few hours, but most clients can apply makeup later the same day.'
+    q: 'How often should I get a HydraFacial?',
+    a: 'Many professionals recommend a treatment every four to six weeks, though ideal frequency depends on your skin.'
+  },
+  {
+    q: 'What should I expect during a HydraFacial treatment?',
+    a: 'A session lasts about 30\u201360 minutes and feels like a cool paintbrush on the skin. There is no downtime afterwards.'
+  },
+  {
+    q: 'Are there any side effects?',
+    a: 'Side effects are minimal. You might notice slight redness right after treatment but it fades quickly, and irritation or peeling is uncommon.'
+  },
+  {
+    q: 'Can I combine a HydraFacial with other treatments?',
+    a: 'Yes. HydraFacials often pair well with treatments like chemical peels, microdermabrasion or LED therapy. Ask your provider for a tailored plan.'
+  },
+  {
+    q: 'How much does a HydraFacial cost?',
+    a: 'Prices vary by clinic and location but typically range from $150 to $300 per session, with package deals lowering the per-treatment cost.'
+  },
+  {
+    q: 'What results can I expect from a HydraFacial?',
+    a: 'You can see smoother texture, smaller pores and a radiant glow immediately. Regular treatments promote long-term skin health.'
   }
 ]
 
