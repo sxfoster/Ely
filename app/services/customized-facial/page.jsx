@@ -3,18 +3,13 @@ import Nav from '../../components/Nav'
 import styles from '../ServicePage.module.css';
 
 // About text for this service
-const aboutText = `Tailored facials combining various treatments to address individual skin concerns and enhance overall skin health.`
+const aboutText = `Designed to cater specifically to your skin's unique needs and concerns. Our custom facial includes a skin analysis, a purifying double cleanse, exfoliation will remove dead skin as well as soften the skin with steam and warming towels. Extractions will remove any noticeable clogged pores. A soothing & nourishing mask while receiving a relaxing shoulder and scalp massage to promote circulation will leave you feeling refreshed & rejuvenated.`
 
 // Key benefits for this service
 const benefits = [
   'Tailored to your needs',
   'Includes relaxing massage',
   'Targets hydration or blemishes'
-]
-
-
-const description = [
-  'Tailored facials combining various treatments to address individual skin concerns and enhance overall skin health.'
 ]
 
 const customizedFacialFAQs = [
@@ -71,10 +66,6 @@ export default function CustomizedFacialPage() {
               </li>
             ))}
           </ul>
-        </section>
-
-        <section>
-          {description.map((p, i) => <p key={i}>{p}</p>)}
         </section>
 
         {customizedFacialFAQs.length > 0 && (

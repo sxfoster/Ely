@@ -3,7 +3,7 @@ import Nav from '../../components/Nav'
 import styles from '../ServicePage.module.css';
 
 // About text for this service
-const aboutText = `The Skinbetter Peel gently resurfaces using medical grade acids for improved tone and clarity. A series of peels can dramatically smooth texture and fade pigmentation.`
+const aboutText = `Achieve a rejuvenated and radiant complexion with our Skinbetter Peel facial. This innovative and professional treatment removes dead skin cells, unclogs pores, and stimulates collagen production for a smoother and more youthful appearance. Transform your skin and reveal its natural beauty with our Skinbetter Peel facial.`
 
 // Key benefits for this service
 const benefits = [
@@ -11,13 +11,6 @@ const benefits = [
   'Targets dark spots',
   'Minimal flaking'
 ]
-
-
-const description = [
-  'The Skinbetter Peel gently resurfaces using medical grade acids for improved tone and clarity.',
-  'A series of peels can dramatically smooth texture and fade pigmentation.'
-]
-
 const skinbetterPeelFAQs = [
   {
     q: 'What is a Skinbetter Peel?',
@@ -76,10 +69,6 @@ export default function SkinbetterPeelPage() {
               </li>
             ))}
           </ul>
-        </section>
-
-        <section>
-          {description.map((p, i) => <p key={i}>{p}</p>)}
         </section>
 
         {skinbetterPeelFAQs.length > 0 && (

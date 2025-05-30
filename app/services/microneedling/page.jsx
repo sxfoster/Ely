@@ -14,11 +14,6 @@ const benefits = [
 ]
 
 
-const description = [
-  'Microneedling stimulates collagen production, improving skin texture and reducing fine lines for a youthful appearance.'
-]
-
-
 const microneedlingFAQs = [
   {
     q: 'What is microneedling?',
@@ -94,10 +89,6 @@ export default function MicroneedlingPage() {
               </li>
             ))}
           </ul>
-        </section>
-
-        <section>
-          {description.map((p, i) => <p key={i}>{p}</p>)}
         </section>
 
         {microneedlingFAQs.length > 0 && (

@@ -12,12 +12,6 @@ const benefits = [
   'Boosts radiance'
 ]
 
-
-const description = [
-  'This treatment pairs mild exfoliation with powerful peptides to promote firm, supple skin.',
-  'Regular sessions smooth wrinkles and even out tone.'
-]
-
 const antiAgePeptidePeelFAQs = [
   {
     q: 'What makes the Peptide Peel unique?',
@@ -71,10 +65,6 @@ export default function AntiAgePeptidePeelPage() {
               </li>
             ))}
           </ul>
-        </section>
-
-        <section>
-          {description.map((p, i) => <p key={i}>{p}</p>)}
         </section>
 
         {antiAgePeptidePeelFAQs.length > 0 && (

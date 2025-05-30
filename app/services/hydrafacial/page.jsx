@@ -3,7 +3,7 @@ import Nav from '../../components/Nav'
 import styles from '../ServicePage.module.css';
 
 // About text for this service
-const aboutText = `Hydrafacials deeply cleanse, exfoliate, and hydrate the skin, effectively addressing acne, dryness, and signs of aging.`
+const aboutText = `The Platinum HydraFacial is the ultimate Treatment. It starts with Dermaplaning to remove all the peach fuzz. Lymphatic drainage is used to improve immune function while reducing fine lines and wrinkles. This HydraFacial includes everything a deluxe treatment offers. While addressing your specific skin concerns. We conclude with LED light therapy to help banish the signs of aging, along with scalp massage.`
 
 // Key benefits for this service
 const benefits = [
@@ -12,10 +12,6 @@ const benefits = [
   'Delivers antioxidants'
 ]
 
-
-const description = [
-  'Hydrafacials deeply cleanse, exfoliate, and hydrate the skin, effectively addressing acne, dryness, and signs of aging.'
-]
 
 const hydrafacialFAQs = [
   {
@@ -71,10 +67,6 @@ export default function HydrafacialPage() {
               </li>
             ))}
           </ul>
-        </section>
-
-        <section>
-          {description.map((p, i) => <p key={i}>{p}</p>)}
         </section>
 
         {hydrafacialFAQs.length > 0 && (

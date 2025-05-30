@@ -3,18 +3,13 @@ import Nav from '../../components/Nav'
 import styles from '../ServicePage.module.css';
 
 // About text for this service
-const aboutText = `Dermaplaning gently exfoliates dead skin cells and removes fine hair, revealing a smoother, brighter complexion.`
+const aboutText = `Achieve dreamy, glowing skin with the Rose Glow Facial. This treatment removes dead skin and peach fuzz, enhancing the penetration of skincare products. Enjoy extractions, a soothing massage, and a rejuvenating hydrojelly mask for a truly pampering experience.`
 
 // Key benefits for this service
 const benefits = [
   'Removes peach fuzz',
   'Improves product absorption',
   'Instantly brighter skin'
-]
-
-
-const description = [
-  'Dermaplaning gently exfoliates dead skin cells and removes fine hair, revealing a smoother, brighter complexion.'
 ]
 
 const roseGlowDermaplaningFAQs = [
@@ -71,10 +66,6 @@ export default function RoseGlowDermaplaningPage() {
               </li>
             ))}
           </ul>
-        </section>
-
-        <section>
-          {description.map((p, i) => <p key={i}>{p}</p>)}
         </section>
 
         {roseGlowDermaplaningFAQs.length > 0 && (
