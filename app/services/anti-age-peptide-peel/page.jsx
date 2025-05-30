@@ -3,7 +3,7 @@ import Nav from '../../components/Nav'
 import styles from '../ServicePage.module.css';
 
 // About text for this service
-const aboutText = `This treatment pairs mild exfoliation with powerful peptides to promote firm, supple skin. Regular sessions smooth wrinkles and even out tone.`
+const aboutText = `Peptides are the amino acids that replenish & rebuild damaged skin cells. A peptide peel will tighten, brighten, hydrate and repair compromised, dry, sun damaged and break out prone skin. This one hour treatment focuses on nourishing the skin with a no peel, peel. Along with a cocktail of peptides. Shoulder, scalp & facial massage will leave you feeling refreshed, hydrated & 10 years younger.`
 
 // Key benefits for this service
 const benefits = [
@@ -18,10 +18,6 @@ const description = [
   'Regular sessions smooth wrinkles and even out tone.'
 ]
 
-const testimonial = {
-  text: 'I love how smooth my skin feels!',
-  author: 'Lily S.'
-}
 const antiAgePeptidePeelFAQs = [
   {
     q: 'What makes the Peptide Peel unique?',
@@ -56,7 +52,7 @@ export default function AntiAgePeptidePeelPage() {
 
       <div className="service-content container">
         <section className={styles.aboutSection}>
-          <h2>About Anti-Age Peptide Peel</h2>
+          <h2>Anti-Age Peptide Peel</h2>
           <p>{aboutText}</p>
         </section>
         <section className={styles.benefitsSection}>
@@ -81,21 +77,12 @@ export default function AntiAgePeptidePeelPage() {
           {description.map((p, i) => <p key={i}>{p}</p>)}
         </section>
 
-        <figure className="before-after">
-          <img src="/images/services/anti-age-peptide-peel-beforeafter.jpg" alt="Before and after Anti-Age Peptide Peel result" />
-        </figure>
-
         {antiAgePeptidePeelFAQs.length > 0 && (
           <section className={styles.faqSection}>
             <h2>Frequently Asked Questions</h2>
             <AccordionFAQ faqs={antiAgePeptidePeelFAQs} />
           </section>
         )}
-
-        <section className="testimonial">
-          <blockquote>{testimonial.text}</blockquote>
-          <cite>- {testimonial.author}</cite>
-        </section>
       </div>
 
       <div className="sticky-cta">
