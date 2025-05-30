@@ -12,7 +12,6 @@ const benefits = [
   'Boosts radiance'
 ]
 
-const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
 const description = [
   'This treatment pairs mild exfoliation with powerful peptides to promote firm, supple skin.',
@@ -100,15 +99,13 @@ export default function AntiAgePeptidePeelPage() {
       </div>
 
       <div className="sticky-cta">
-        <a
-          href={bookingUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          id="open-booking-dialog"
           className="btn btn-primary"
-          aria-label="Book this service on Vagaro"
+          aria-label="Open booking instructions"
         >
           Book Now
-        </a>
+        </button>
       </div>
     </div>
   )

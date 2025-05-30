@@ -12,7 +12,6 @@ const benefits = [
   'Minimal flaking'
 ]
 
-const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
 const description = [
   'The Skinbetter Peel gently resurfaces using medical grade acids for improved tone and clarity.',
@@ -105,15 +104,13 @@ export default function SkinbetterPeelPage() {
       </div>
 
       <div className="sticky-cta">
-        <a
-          href={bookingUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          id="open-booking-dialog"
           className="btn btn-primary"
-          aria-label="Book this service on Vagaro"
+          aria-label="Open booking instructions"
         >
           Book Now
-        </a>
+        </button>
       </div>
     </div>
   )

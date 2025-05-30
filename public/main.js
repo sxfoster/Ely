@@ -46,17 +46,19 @@ if (closeBtn && modal) {
 }
 
 // Booking dialog logic
-const openBookingBtn   = document.getElementById('open-booking-dialog');
+const openBookingBtns  = document.querySelectorAll('#open-booking-dialog');
 const menuBookingBtn = document.getElementById('menu-open-booking-dialog');
 const bookingModal     = document.getElementById('booking-modal');
 const bookingCloseBtn  = document.querySelector('.booking-close');
 const bookingContinue  = document.getElementById('booking-continue');
 
 // 1) Open the dialog
-if (openBookingBtn && bookingModal) {
-  openBookingBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    bookingModal.style.display = 'flex';
+if (openBookingBtns && bookingModal) {
+  openBookingBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      bookingModal.style.display = 'flex';
+    });
   });
 }
 

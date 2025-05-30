@@ -12,7 +12,6 @@ const benefits = [
   'Delivers antioxidants'
 ]
 
-const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
 const description = [
   'Hydrafacials deeply cleanse, exfoliate, and hydrate the skin, effectively addressing acne, dryness, and signs of aging.'
@@ -100,15 +99,13 @@ export default function HydrafacialPage() {
       </div>
 
       <div className="sticky-cta">
-        <a
-          href={bookingUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          id="open-booking-dialog"
           className="btn btn-primary"
-          aria-label="Book this service on Vagaro"
+          aria-label="Open booking instructions"
         >
           Book Now
-        </a>
+        </button>
       </div>
     </div>
   )

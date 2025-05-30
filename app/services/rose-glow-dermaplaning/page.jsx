@@ -12,7 +12,6 @@ const benefits = [
   'Instantly brighter skin'
 ]
 
-const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
 
 const description = [
   'Dermaplaning gently exfoliates dead skin cells and removes fine hair, revealing a smoother, brighter complexion.'
@@ -100,15 +99,13 @@ export default function RoseGlowDermaplaningPage() {
       </div>
 
       <div className="sticky-cta">
-        <a
-          href={bookingUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          id="open-booking-dialog"
           className="btn btn-primary"
-          aria-label="Book this service on Vagaro"
+          aria-label="Open booking instructions"
         >
           Book Now
-        </a>
+        </button>
       </div>
     </div>
   )
