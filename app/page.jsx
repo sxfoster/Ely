@@ -88,8 +88,7 @@ export default function HomePage() {
               this facial.
             </p>
             <button
-              id="open-booking-dialog"
-              className="btn btn-primary"
+              className="btn btn-primary js-open-booking-dialog"
             >
               Book Your Facial Today!
             </button>
