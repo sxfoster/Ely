@@ -17,10 +17,6 @@ const description = [
   'Dermaplaning gently exfoliates dead skin cells and removes fine hair, revealing a smoother, brighter complexion.'
 ]
 
-const testimonial = {
-  text: "Best facial I've had—my makeup glides on flawlessly!",
-  author: 'Melissa T.'
-}
 const roseGlowDermaplaningFAQs = [
   {
     q: 'What is dermaplaning?',
@@ -81,10 +77,6 @@ export default function RoseGlowDermaplaningPage() {
           {description.map((p, i) => <p key={i}>{p}</p>)}
         </section>
 
-        <figure className="before-after">
-          <img src="/images/services/rose-glow-dermaplaning-beforeafter.jpg" alt="Before and after Rose Glow Dermaplaning Facial result" />
-        </figure>
-
         {roseGlowDermaplaningFAQs.length > 0 && (
           <section className={styles.faqSection}>
             <h2>Frequently Asked Questions</h2>
@@ -92,10 +84,6 @@ export default function RoseGlowDermaplaningPage() {
           </section>
         )}
 
-        <section className="testimonial">
-          <blockquote>{testimonial.text}</blockquote>
-          <cite>- {testimonial.author}</cite>
-        </section>
       </div>
 
       <div className="sticky-cta">

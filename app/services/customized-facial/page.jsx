@@ -17,10 +17,6 @@ const description = [
   'Tailored facials combining various treatments to address individual skin concerns and enhance overall skin health.'
 ]
 
-const testimonial = {
-  text: 'Elyzia always knows exactly what my skin needs!',
-  author: 'Carmen L.'
-}
 const customizedFacialFAQs = [
   {
     q: 'What is included in a Customized Facial?',
@@ -81,21 +77,12 @@ export default function CustomizedFacialPage() {
           {description.map((p, i) => <p key={i}>{p}</p>)}
         </section>
 
-        <figure className="before-after">
-          <img src="/images/services/customized-facial-beforeafter.jpg" alt="Before and after Customized Facial result" />
-        </figure>
-
         {customizedFacialFAQs.length > 0 && (
           <section className={styles.faqSection}>
             <h2>Frequently Asked Questions</h2>
             <AccordionFAQ faqs={customizedFacialFAQs} />
           </section>
         )}
-
-        <section className="testimonial">
-          <blockquote>{testimonial.text}</blockquote>
-          <cite>- {testimonial.author}</cite>
-        </section>
       </div>
 
       <div className="sticky-cta">

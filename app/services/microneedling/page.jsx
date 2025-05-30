@@ -18,10 +18,6 @@ const description = [
   'Microneedling stimulates collagen production, improving skin texture and reducing fine lines for a youthful appearance.'
 ]
 
-const testimonial = {
-  text: 'Microneedling with Elyzia transformed my acne scars!',
-  author: 'Sofia R.'
-}
 
 const microneedlingFAQs = [
   {
@@ -104,10 +100,6 @@ export default function MicroneedlingPage() {
           {description.map((p, i) => <p key={i}>{p}</p>)}
         </section>
 
-        <figure className="before-after">
-          <img src="/images/services/microneedling-beforeafter.jpg" alt="Before and after Microneedling result" />
-        </figure>
-
         {microneedlingFAQs.length > 0 && (
           <section className={styles.faqSection}>
             <h2>Frequently Asked Questions</h2>
@@ -115,10 +107,6 @@ export default function MicroneedlingPage() {
           </section>
         )}
 
-        <section className="testimonial">
-          <blockquote>{testimonial.text}</blockquote>
-          <cite>- {testimonial.author}</cite>
-        </section>
       </div>
 
       <div className="sticky-cta">

@@ -19,7 +19,6 @@ const services = {
       { q: 'How many sessions do I need?', a: 'Most clients see best results after 3–6 visits.' },
       { q: 'Is there downtime?', a: 'Expect some redness for about a day.' }
     ],
-    testimonial: { text: 'Microneedling with Elyzia transformed my acne scars!', author: 'Sofia R.' }
   },
   'skinbetter-peel': {
     name: 'Skinbetter Peel',
@@ -37,7 +36,6 @@ const services = {
       { q: 'Will I peel a lot?', a: 'Most experience only light flaking for a few days.' },
       { q: 'How often should I get one?', a: 'Peels are typically spaced 4–6 weeks apart.' }
     ],
-    testimonial: { text: 'My skin glows after each peel!', author: 'Andrea M.' }
   },
   'anti-age-peptide-peel': {
     name: 'Anti-Age Peptide Peel Treatment',
@@ -55,7 +53,6 @@ const services = {
       { q: 'Is it good for sensitive skin?', a: "Yes, it's designed to be gentle while still effective." },
       { q: 'How quickly will I see results?', a: 'Skin looks refreshed after one treatment with cumulative benefits over time.' }
     ],
-    testimonial: { text: 'I love how smooth my skin feels!', author: 'Lily S.' }
   },
   'rose-glow-dermaplaning': {
     name: 'Rose Glow Dermaplaning Facial',
@@ -72,7 +69,6 @@ const services = {
       { q: 'Will my hair grow back thicker?', a: 'No, dermaplaning will not change hair growth.' },
       { q: 'How often can I have this done?', a: 'Every 4 weeks is ideal for maintaining smooth skin.' }
     ],
-    testimonial: { text: "Best facial I've had—my makeup glides on flawlessly!", author: 'Melissa T.' }
   },
   hydrafacial: {
     name: 'Platinum Hydrafacial',
@@ -89,7 +85,6 @@ const services = {
       { q: 'Is it safe for sensitive skin?', a: "Yes, the treatment is adjustable to your skin's needs." },
       { q: 'How long does it take?', a: 'About 60 minutes from start to finish.' }
     ],
-    testimonial: { text: 'My skin has never looked better after a Hydrafacial!', author: 'Jason P.' }
   },
   'customized-facial': {
     name: 'Customized Facial',
@@ -106,7 +101,6 @@ const services = {
       { q: 'What products are used?', a: 'We select professional-grade formulas based on your skin type.' },
       { q: 'Can I combine this with other treatments?', a: "Yes, it's a great complement to peels or microneedling." }
     ],
-    testimonial: { text: 'Elyzia always knows exactly what my skin needs!', author: 'Carmen L.' }
   }
 }
 
@@ -129,7 +123,7 @@ export default function ServicePage({ params }) {
 
   if (!data) return notFound()
 
-  const { name, headline, benefits, description, faqs, testimonial } = data
+  const { name, headline, benefits, description, faqs } = data
   const serviceFAQs = faqs
 
   return (
@@ -163,10 +157,6 @@ export default function ServicePage({ params }) {
           {description.map((p, i) => <p key={i}>{p}</p>)}
         </section>
 
-        <figure className="before-after">
-          <img src={`/images/services/${params.slug}-beforeafter.jpg`} alt={`Before and after ${name} result`} />
-        </figure>
-
         {serviceFAQs.length > 0 && (
           <section className={styles.faqSection}>
             <h2>Frequently Asked Questions</h2>
@@ -174,10 +164,6 @@ export default function ServicePage({ params }) {
           </section>
         )}
 
-        <section className="testimonial">
-          <blockquote>{testimonial.text}</blockquote>
-          {testimonial.author && <cite>- {testimonial.author}</cite>}
-        </section>
       </div>
 
       <div className="sticky-cta">
