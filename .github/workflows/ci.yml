@@ -16,6 +16,13 @@ jobs:
           node-version: '18.x'
       - run: npm ci
       - run: npm run build
+      - name: Run tests and collect coverage
+        run: npm run test:ci
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/ # Default Jest coverage directory
       - name: Upload build output
         uses: actions/upload-artifact@v4
         with:
