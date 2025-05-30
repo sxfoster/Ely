@@ -47,7 +47,11 @@ if (closeBtn && modal) {
 
 // Booking dialog logic
 const openBookingBtns  = document.querySelectorAll('.js-open-booking-dialog');
-const menuBookingBtn = document.getElementById('.js-open-booking-dialog');
+// Specifically target the "Book Now" link inside the mobile menu so we can
+// close the menu before opening the booking modal. `getElementById` was used
+// previously which always returned `null` because this element uses a class
+// selector, not an id.
+const menuBookingBtn = document.querySelector('.menu-items .js-open-booking-dialog');
 const bookingModal     = document.getElementById('booking-modal');
 const bookingCloseBtn  = document.querySelector('.booking-close');
 const bookingContinue  = document.getElementById('booking-continue');
