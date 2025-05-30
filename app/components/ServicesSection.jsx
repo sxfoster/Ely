@@ -35,7 +35,7 @@ const services = [
     id: 5,
     name: "Platinum Hydrafacial",
     image: "/images/hydrafacial.jpg",
-    slug: "platinum-hydrafacial",
+    slug: "hydrafacial",
   },
   {
     id: 6,
