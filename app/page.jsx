@@ -57,7 +57,7 @@ export default function HomePage() {
         </div>
 
         <div className="menu-items">
-          <a href="#" id="menu-open-booking-dialog">Book Now</a>
+          <a href="#" className="js-open-booking-dialog">Book Now</a>
           <a href="#hero">Home</a>
           <a href="#about">About</a>
           <a href="#services">Services</a>
