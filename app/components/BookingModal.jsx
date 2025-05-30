@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function BookingModal() {
   return (
-    <div id="booking-modal" className="modal booking-modal">
+    <div id="booking-modal" className="modal booking-modal" aria-hidden="true">
       <div className="modal-content booking-content">
         <span className="booking-close">&times;</span>
         <h2>How to Book with Ely Aesthetics</h2>
