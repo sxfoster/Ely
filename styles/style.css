@@ -361,6 +361,9 @@ nav a.active {
   justify-content: center;
   z-index: 1000;
 }
+.booking-modal.is-visible {
+  display: flex;
+}
 .booking-content {
   background: #fff;
   padding: 2rem;

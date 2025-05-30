@@ -57,7 +57,8 @@ if (openBookingBtns && bookingModal) {
   openBookingBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      bookingModal.style.display = 'flex';
+      bookingModal.classList.add('is-visible');
+      bookingModal.setAttribute('aria-hidden', 'false');
     });
   });
 }
@@ -70,14 +71,16 @@ if (menuBookingBtn && bookingModal) {
       menuItemsContainer.classList.remove('active');
     }
     // open the booking dialog
-    bookingModal.style.display = 'flex';
+    bookingModal.classList.add('is-visible');
+    bookingModal.setAttribute('aria-hidden', 'false');
   });
 }
 
 // 2) Close via ×
 if (bookingCloseBtn && bookingModal) {
   bookingCloseBtn.addEventListener('click', () => {
-    bookingModal.style.display = 'none';
+    bookingModal.classList.remove('is-visible');
+    bookingModal.setAttribute('aria-hidden', 'true');
   });
 }
 
@@ -85,7 +88,8 @@ if (bookingCloseBtn && bookingModal) {
 if (bookingModal) {
   bookingModal.addEventListener('click', (e) => {
     if (e.target === bookingModal) {
-      bookingModal.style.display = 'none';
+      bookingModal.classList.remove('is-visible');
+      bookingModal.setAttribute('aria-hidden', 'true');
     }
   });
 }
@@ -97,7 +101,8 @@ if (bookingContinue) {
       'https://mysite.vagaro.com/sweetcreamandrose/book-now',
       '_blank'
     );
-    bookingModal.style.display = 'none';
+    bookingModal.classList.remove('is-visible');
+    bookingModal.setAttribute('aria-hidden', 'true');
   });
 }
 
