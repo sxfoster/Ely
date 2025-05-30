@@ -1,66 +1,95 @@
-# Ely Aesthetics Site
+# Ely's Esthetics Website (ely.rabbitholesolution.com)
 
-This project is a [Next.js](https://nextjs.org/) application that statically exports a small marketing site for Ely Aesthetics.
+This project is the official website for Ely's Esthetics, a skincare and esthetics service provider. It allows users to browse available services, learn more about the business, and book appointments.
 
-## Prerequisites
+## Getting Started
 
-- [Node.js](https://nodejs.org/) (version 18.x is required)
-- npm (comes with Node)
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-## Installation
+### Prerequisites
 
-1. Clone the repository and change into the project directory:
+*   Node.js (version 18 recommended - as specified in `.nvmrc`)
+*   npm (comes with Node.js)
 
-   ```bash
-   git clone <repo-url>
-   cd Ely
-   ```
+### Installation
 
-2. Install dependencies:
+1.  Clone the repository:
+    ```bash
+    git clone <repository_url>
+    ```
+    (Replace `<repository_url>` with the actual URL of the repository)
 
-   ```bash
-   npm install
-   ```
+2.  Navigate to the project directory:
+    ```bash
+    cd ely.rabbitholesolution.com
+    ```
 
-## Development Workflow
+3.  Install the dependencies:
+    ```bash
+    npm install
+    ```
 
-During development, run the built‑in dev server. This provides hot reloading and runs the site at `http://localhost:3000` by default.
+## Running the Project
+
+Once the installation is complete, you can run the project using the following scripts:
+
+### Development Server
+
+To start the development server with hot reloading:
 
 ```bash
 npm run dev
 ```
+This will typically start the server at `http://localhost:3000`.
 
-Edit files under `app/`, `content/`, `styles/` and `public/` and the browser will refresh as you save changes.
+### Building the Project
 
-## Building for Production
-
-The project uses `output: 'export'` in `next.config.js`. Running the build script compiles the app and writes a fully static site to the `out/` directory:
+To create a production build:
 
 ```bash
 npm run build
 ```
+This will generate an optimized version of the application in the `.next` folder.
 
-The contents of `out/` can be deployed to any static hosting provider.
+### Production Server
+
+To start the production server (after building the project):
+
+```bash
+npm run start
+```
+This command starts a Node.js server that serves the built application.
+
+## Running Tests
+
+This project uses Jest for testing. To run the test suite:
+
+```bash
+npm test
+```
+This command will execute all test files found in the `__tests__` directory and any other files matching Jest's test patterns.
 
 ## Project Structure
 
-- `app/` – Next.js pages, layout and React components
-- `public/` – Client‑side JavaScript (`main.js`) and static assets
-- `styles/` – Global CSS
-- `old/` – Legacy HTML/CSS/JS kept for reference
-- `out/` – Generated static site after running the build
+Here's a brief overview of the key directories and their purposes:
 
-## Continuous Integration
+*   \`app/\`: Contains the core application code, including pages, layouts, and components specific to Next.js 13+ App Router.
+    *   \`app/components/\`: Reusable React components used throughout the application.
+    *   \`app/services/\`: Contains pages and components related to specific services offered.
+*   \`__tests__/\`: Houses all the test files, primarily using Jest.
+*   \`content/\`: Stores content files, such as JSON data, that might be used to populate parts of the website (e.g., banners).
+*   \`public/\`: Static assets that are served directly, such as images, fonts, or other files like `main.js`.
+*   \`styles/\`: Global styles or style-related configurations.
+*   \`.github/workflows/\`: Contains CI/CD pipeline configurations, like the GitHub Actions workflow for continuous integration.
 
-This repository includes a GitHub Actions workflow (`.github/workflows/ci.yml`) that runs on every push and pull request to `main`. It installs dependencies with `npm ci`, builds the project, and uploads the `out/` directory as an artifact. Uncomment the deployment steps in the workflow to publish the site automatically to GitHub Pages or adapt it for another host such as Netlify.
+## Technologies Used
 
-Create a branch protection rule for `main` so that pull requests must pass this workflow before they can be merged.
+*   **Next.js:** A React framework for building server-side rendered and statically generated web applications.
+*   **React:** A JavaScript library for building user interfaces.
+*   **Jest:** A JavaScript testing framework used for unit and integration testing.
+*   **CSS Modules:** For locally scoped CSS to avoid style conflicts and improve modularity.
+*   **Node.js:** JavaScript runtime environment used for the backend and build processes.
 
-## Additional Notes
+## Deployment
 
-- To start the production server (useful for previewing the build locally), run:
-
-  ```bash
-  npm run start
-  ```
-
+This project is configured for continuous integration and deployment using GitHub Actions. The workflow can be found in \`.github/workflows/ci.yml\`. Any pushes or merges to the main branch will typically trigger a build and deployment process.
