@@ -16,40 +16,44 @@ const benefits = [
 
 const microneedlingFAQs = [
   {
-    q: 'What is microneedling?',
-    a: 'Microneedling is a minimally invasive skin treatment that uses fine needles to create micro-channels in the skin, stimulating your body\u2019s natural collagen production and promoting smoother, firmer, and more even-toned skin.'
+    q: 'What is SkinPen microneedling?',
+    a: 'SkinPen is an FDA-cleared, medical-grade microneedling device that creates controlled micro-injuries in the skin to stimulate natural collagen and elastin production, improving the appearance of fine lines, wrinkles, acne scars, and overall skin texture.'
   },
   {
-    q: 'Does microneedling hurt?',
-    a: 'Most clients describe the sensation as mild and tolerable. A topical numbing cream is applied before treatment to ensure your comfort.'
+    q: 'What skin concerns can SkinPen treat?',
+    a: 'SkinPen is clinically proven to improve the look of facial acne scars in adults and is also effective for reducing fine lines, wrinkles, large pores, stretch marks, and uneven skin tone.'
   },
   {
-    q: 'How many sessions will I need?',
-    a: 'While many clients see visible improvements after just one session, a series of 3\u20136 treatments spaced about 4\u20136 weeks apart is recommended for optimal results.'
+    q: 'Is SkinPen microneedling safe?',
+    a: 'Yes. SkinPen is FDA-cleared, sterile, and single-use for each patient. Treatments are performed by trained professionals following strict protocols to ensure safety and hygiene.'
   },
   {
-    q: 'What is the downtime after microneedling?',
-    a: 'Downtime is minimal. You may experience mild redness, sensitivity, or swelling for 1\u20133 days post-treatment, similar to a light sunburn.'
+    q: 'How does SkinPen microneedling work?',
+    a: 'The SkinPen uses tiny, sterile needles to create thousands of micro-channels in the skin. This triggers the body\u2019s natural healing response, stimulating collagen and elastin production, which helps renew skin texture and firmness.'
   },
   {
-    q: 'When will I see results?',
-    a: 'Many clients notice improved skin texture and glow within a week, with continued improvement as collagen production increases over the following weeks.'
+    q: 'Does SkinPen microneedling hurt?',
+    a: 'Most clients describe the treatment as mildly uncomfortable rather than painful. A topical numbing cream is applied before treatment to maximize comfort.'
   },
   {
-    q: 'Are there any side effects?',
-    a: 'Temporary redness, sensitivity, or slight swelling are common but subside quickly. Your esthetician will review all aftercare and safety guidelines with you.'
+    q: 'How many SkinPen sessions will I need?',
+    a: 'Many people see noticeable improvement after just one session, but for optimal results\u2014especially for acne scars or deeper wrinkles\u2014a series of 3 treatments spaced 4\u20136 weeks apart is typically recommended.'
   },
   {
-    q: 'Is microneedling safe for all skin types?',
-    a: 'Yes! Microneedling is safe and effective for most skin types and tones. A consultation will help determine the best approach for your unique needs.'
+    q: 'What is the downtime after SkinPen microneedling?',
+    a: 'Downtime is minimal. Most people experience redness and mild swelling for 1\u20133 days, similar to a mild sunburn. You can usually return to normal activities within 24\u201348 hours.'
   },
   {
-    q: 'What should I avoid after microneedling?',
-    a: 'Avoid direct sun exposure, heavy makeup, and active skincare ingredients (like retinol or acids) for a few days. Your provider will share detailed aftercare instructions.'
+    q: 'When will I see results from SkinPen?',
+    a: 'Some clients notice an immediate glow, but optimal results appear gradually over 4\u20136 weeks as collagen remodeling continues.'
   },
   {
-    q: 'Can I combine microneedling with other treatments?',
-    a: 'Absolutely! Many clients combine microneedling with facials or peels for enhanced results. Your esthetician can recommend a custom plan.'
+    q: 'Is SkinPen suitable for all skin types and tones?',
+    a: 'Yes! SkinPen is safe and effective for all skin types and colors, with little risk of hyperpigmentation or scarring.'
+  },
+  {
+    q: 'Are there any side effects or risks with SkinPen microneedling?',
+    a: 'Side effects are typically mild and temporary, including redness, swelling, and minor skin sensitivity. Serious complications are rare when performed by a qualified provider. Always follow aftercare instructions to minimize risk.'
   }
 ]
 
