@@ -2,8 +2,6 @@ import AccordionFAQ from '@/components/AccordionFAQ'
 import { notFound } from 'next/navigation'
 import styles from '../ServicePage.module.css';
 
-const bookingUrl = 'https://mysite.vagaro.com/sweetcreamandrose/book-now'
-
 const services = {
   microneedling: {
     name: 'Microneedling',
@@ -183,15 +181,13 @@ export default function ServicePage({ params }) {
       </div>
 
       <div className="sticky-cta">
-        <a
-          href={bookingUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          id="open-booking-dialog"
           className="btn btn-primary"
-          aria-label="Book this service on Vagaro"
+          aria-label="Open booking instructions"
         >
           Book Now
-        </a>
+        </button>
       </div>
     </div>
   )
