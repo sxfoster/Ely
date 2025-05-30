@@ -1,5 +1,6 @@
 import AccordionFAQ from '@/components/AccordionFAQ'
 import Nav from '../../components/Nav'
+import styles from '../ServicePage.module.css';
 
 // About text for this service
 const aboutText = `The Skinbetter Peel gently resurfaces using medical grade acids for improved tone and clarity. A series of peels can dramatically smooth texture and fade pigmentation.`
@@ -60,10 +61,25 @@ export default function SkinbetterPeelPage() {
       <Nav />
 
       <div className="service-content container">
-        <section>
-          <h2>Key Benefits</h2>
-          <ul>
-            {benefits.map((b) => <li key={b}>{b}</li>)}
+        <section className={styles.aboutSection}>
+          <h2>About Skinbetter Peel</h2>
+          <p>{aboutText}</p>
+        </section>
+        <section className={styles.benefitsSection}>
+          <h2 className={styles.benefitsTitle}>Key Benefits</h2>
+          <ul className={styles.benefitsList}>
+            {benefits.map((b) => (
+              <li key={b} className={styles.benefitItem}>
+                <svg
+                  className={styles.benefitIcon}
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 16.17l-3.5-3.5L4 14.17 9 19.17 20 8.17 18.59 6.75z" />
+                </svg>
+                <span className={styles.benefitText}>{b}</span>
+              </li>
+            ))}
           </ul>
         </section>
 
@@ -76,8 +92,8 @@ export default function SkinbetterPeelPage() {
         </figure>
 
         {skinbetterPeelFAQs.length > 0 && (
-          <section>
-            <h2 className="faq-heading">Frequently Asked Questions</h2>
+          <section className={styles.faqSection}>
+            <h2>Frequently Asked Questions</h2>
             <AccordionFAQ faqs={skinbetterPeelFAQs} />
           </section>
         )}
