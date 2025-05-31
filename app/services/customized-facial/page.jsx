@@ -47,7 +47,7 @@ export default function CustomizedFacialPage() {
 
       <div className="service-content container">
         <section className={styles.aboutSection}>
-          <h2>About Customized Facial</h2>
+          <h2>Customized Facial</h2>
           <p>{aboutText}</p>
         </section>
         <section className={styles.benefitsSection}>

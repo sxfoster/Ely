@@ -47,7 +47,7 @@ export default function RoseGlowDermaplaningPage() {
 
       <div className="service-content container">
         <section className={styles.aboutSection}>
-          <h2>About Rose Glow Dermaplaning Facial</h2>
+          <h2>Rose Glow Dermaplaning Facial</h2>
           <p>{aboutText}</p>
         </section>
         <section className={styles.benefitsSection}>

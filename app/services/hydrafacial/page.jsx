@@ -68,7 +68,7 @@ export default function HydrafacialPage() {
 
       <div className="service-content container">
         <section className={styles.aboutSection}>
-          <h2>About Platinum Hydrafacial</h2>
+          <h2>Platinum Hydrafacial</h2>
           <p>{aboutText}</p>
         </section>
         <section className={styles.benefitsSection}>

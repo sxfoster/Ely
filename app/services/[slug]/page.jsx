@@ -132,7 +132,7 @@ export default function ServicePage({ params }) {
 
       <div className="service-content container">
         <section className={styles.aboutSection}>
-          <h2>About {name}</h2>
+          <h2>{name}</h2>
           <p>{headline}</p>
         </section>
         <section className={styles.benefitsSection}>
