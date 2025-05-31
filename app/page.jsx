@@ -81,12 +81,8 @@ export default function HomePage() {
             {/* Optional: add <source src="/videos/hero.webm" type="video/webm" /> */}
           </video>
           <div className="hero-content">
-            <h1>May Facial: Restorative Rose</h1>
-            <p>
-              Our May Facial is the perfect balance of effective yet gentle. A light peel along with a peptide enriched mask will soften and restore balance to the
-              skin. While gua sha will aide in lymphatic drainage. Cryotherapy will bring down inflammation and a soothing shoulder & scalp massage will complete
-              this facial.
-            </p>
+            <h1>SUMMER FACIAL: Chéri & Cream</h1>
+            <p>A cherry enzyme exfoliation, gentle dermaplaning, and a cooling Hydrojelly mask to leave your skin radiant and calm.</p>
             <button
               className="btn btn-primary js-open-booking-dialog"
             >
