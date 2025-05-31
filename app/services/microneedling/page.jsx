@@ -68,7 +68,7 @@ export default function MicroneedlingPage() {
 
       <div className="service-content container">
         <section className={styles.aboutSection}>
-          <h2>About Microneedling</h2>
+          <h2>Microneedling</h2>
           <p>{aboutText}</p>
         </section>
 

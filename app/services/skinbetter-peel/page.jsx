@@ -50,7 +50,7 @@ export default function SkinbetterPeelPage() {
 
       <div className="service-content container">
         <section className={styles.aboutSection}>
-          <h2>About Skinbetter Peel</h2>
+          <h2>Skinbetter Peel</h2>
           <p>{aboutText}</p>
         </section>
         <section className={styles.benefitsSection}>
